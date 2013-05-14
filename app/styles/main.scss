@@ -137,10 +137,11 @@ img {
     Breakpoints
 */
 
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 380px) {
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 2rem;
     }
 
 }
