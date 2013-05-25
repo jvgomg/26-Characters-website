@@ -10,101 +10,562 @@
         <meta name="description" content="2013 Graduate Show from Ravensbourne BA (Hons) Graphic Design">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="http://fast.fonts.com/cssapi/97d6e564-108a-49d5-ae09-3f7a6b8f8fe3.css"/>
+        <!-- <link rel="stylesheet" href="http://fast.fonts.com/cssapi/97d6e564-108a-49d5-ae09-3f7a6b8f8fe3.css"/> -->
         <link rel="stylesheet" href="styles/main.css">
 
-        <!-- build:js scripts/vendor/modernizr.js -->
+        <meta property="og:image" content="http://26characte.rs/images/share.jpg"/>
+        <meta property="og:image:width" content="700" />
+        <meta property="og:image:height" content="500" />
+        <meta property="og:title" content="26 Characters at The Degree Show"/>
+        <meta property="og:url" content="http://26characte.rs"/>
+        <meta property="og:site_name" content=""/>
+        <meta property="og:description"content="" />
+        <meta property="og:type" content="Website"/>
+
+        <!-- build:js scripts/vendor/head.js -->
         <script src="scripts/vendor/modernizr.custom.js"></script>
         <!-- endbuild -->
 
         <script>
             Modernizr.load({
                 test: Modernizr.cssremunit,
-                nope: 'scripts/vendor/js/rem.min.js'
+                nope: '/scripts/vendor/js/rem.min.js'
             });
         </script>
 
     </head>
     <body>
 
-        <section id="intro">
-            <h1>26 Characters <br><span class="where">at <a href="http://thedegreeshow.com/" title="The Degree Show, Ravensbourne">The Degree Show</a></span></h1>
 
-            <p class="strap">Ravensbourne BA (Hons) Graphic Design 2013 Graduate Exhibition</p>
-
-            <p class="dates">
-                Entrance 2pm&ndash;9pm
-                <br><time datetime="2013-06-12">Wednesday 12th June 2013</time>
-                <br><time datetime="2013-06-12">Thursday 13th June 2013</time>
-            </p>
-
-            <p class="address">
-                6 Penrose Way
-                <br>Greenwich Peninsula
-                <br>London SE10 0EW
-            </p>
-
-            <p><a href="http://thedegreeshow.com/" title="The Degree Show, Ravensbourne">Register for tickets</a></p>
-
-            <p class="contact">
-                Follow <a href="http://twitter.com/26chars" title="26 Graphic Design Graduates on Twitter">@26chars</a>
-                <br>Email <a href="mailto:family@26characte.rs" title="Email the 26 Characters">family@26characte.rs</a>
-            </p>
-        </section>
+        <nav>
+            <a href="#about" title="About the 26 Characters">About</a>
+        </nav>
 
 
-        <section id="the-family">
-            <ul class="names">
-                <li>Beatrice Akinyemi</li>
-                <li>Adam Beckford</li>
-                <li>Alazne Ceberio Scobie</li>
-                <li>Soofiya Chaudry</li>
-                <li>Yun Kyung Choi</li>
-                <li>Victoria Coppen</li>
-                <li>David Crawley</li>
-                <li>Liam D&#8217;Arcy</li>
-                <li>Adam Duckett</li>
-                <li>James Greenaway</li>
-                <li>Calum Hale</li>
-                <li>Charlotte Jennings</li>
-                <li>Charlotte Knight</li>
-                <li>Charlotte Lander</li>
-                <li>Natalie Mccarthy</li>
-                <li>Felix Mooneeram</li>
-                <li>Trevor Morris</li>
-                <li>Rory Norton</li>
-                <li>Ami O&#8217;Callaghan</li>
-                <li>Natalie Osinowo</li>
-                <li>Luke Petty</li>
-                <li>Sam Raymond</li>
-                <li>Antony Victor</li>
-                <li>Sean Williamson</li>
-                <li>Lee-Anne Willoughby</li>
-                <li>Meng Jia Xu</li>
+        <p class="family-copy">
+        26 Characters<br>
+        <abbr title="Bachelor of Arts with Honors">BA Hons</abbr> Graphic Design<br>
+        Ravensbourne 2013
+        </p>
+
+        <p id="family-copy-special" class="hidden">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26&nbsp;Characters<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Graphic&nbsp;Design<br>
+        BA&nbsp;Hons<br>
+        <br>
+        Ravensbourne&nbsp;&nbsp;&nbsp;&nbsp;2013
+        </p>
+
+        <pre id="family-copy-pre" class="hidden">       26 Characters
+
+      Graphic Design
+BA Hons
+
+Ravensbourne    2013</pre>
+
+
+        <p id="about-copy">
+            26 Characters<br>
+            &mdash;at <a href="http://thedegreeshow.com" title="The Degree Show">The Degree Show</a><br>
+            <time datetime="2013-06-12">Wed 12</time> &amp; <time datetime="2013-06-13">Tue 13 June 2013</time><br>
+            Ravensbourne,<br>
+            London<br>
+            <a href="http://thedegreeshow.com" title="Register for The Degree Show Tickets">Register for tickets</a>
+        </p>
+
+        <p id="about-copy-special" class="hidden">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26&nbsp;Characters<br>
+        &nbsp;&nbsp;&nbsp;—<br>
+        at&nbsp;The&nbsp;Degree&nbsp;Show<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wed&nbsp;12<br>
+        &amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tue&nbsp;13<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;June&nbsp;2013<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ravensbourne,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;London<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register&nbsp;for<br>
+        &nbsp;&nbsp;&nbsp;tickets
+        </p>
+
+        <pre id="about-copy-pre" class="hidden">               26 Characters
+   —
+at The Degree Show
+
+              Wed 12 &             Tue 13
+
+           June 2013
+
+       Ravensbourne,
+       London
+
+       Register for
+   tickets</pre>
+
+
+        <aside id="share">
+            <h5>Share this page</h5>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+            <a href="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2F26characte.rs&send=true">Like</a>
+        </aside>
+
+
+        <section id="awards">
+            <h3>Awards</h3>
+
+            <h4><abbr title="International Society of Typographic Designers">ISTD</abbr></h4>
+            <ul>
+                <li>
+                    <address><a title="Adam Duckett's website" href="http://adamduckett.co.uk">Adam Duckett</a></address>
+                    <cite>Don Quixote</cite>
+                    ISTD (Pass)
+                </li>
+
+                <li>
+                    <address><a title="Felix Mooneeram's website" href="http://felixmooneeram.co.uk">Felix Mooneeram</a></address>
+                    <cite>Manchester Phoneme/Grapheme Correspondence</cite>
+                    ISTD (Commendation)
+                </li>
+
+                <li>
+                    <address><a title="Natalie McCarthy's website" href="http://nataliemccarthy.co.uk">Natalie McCarthy</a></address>
+                    <cite>Alice’s Adventures, in Wonderland</cite>
+                    ISTD (Pass)
+                </li>
+
+                <li>
+                    <address><a title="Sean Williamson's website" href="http://www.seanwilliamson.co.uk">Sean Williamson</a></address>
+                    <cite>Was This Review Helpful, To You?</cite>
+                    ISTD (Pass)
+                </li>
+            </ul>
+
+            <h4><abbr title="Design and Art Direction">D&amp;AD</abbr></h4>
+            <ul>
+                <li>
+                    <address><a title="James Greenaway's website" href="http://greenaway.io">James Greenaway</a></address>
+                    <cite>BBC Mobius App</cite>
+                    Yellow Pencil Nomination
+                </li>
+
+                <li>
+                    <address><a title="Sam Raymond's website" href="">Sam Raymond</a></address>
+                    <cite>This &amp; That</cite>
+                    Yellow Pencil Nomination
+                </li>
+            </ul>
+
+            <h4><abbr title="Yound Creatives Network">YCN</abbr></h4>
+            <ul>
+                <li>
+                    <address><a title="Calum Hale's website" href="">Calum Hale</a></address>
+                    <cite>Romeo &amp; Juliet by Fedrigoni</cite>
+                    YCN Student Award
+                </li>
             </ul>
         </section>
 
+        <section id="contact">
+            <h3>Twitter</h3>
+            <a title="26 Characters on Twitter" href="https://twitter.com/26chars">@26chars</a>
 
-        <section id="soon">
-            <p><strong>Full site coming soon.</strong></p>
+            <h3>Email</h3>
+            <a title="Email the 26 Characters Family" href="mailto:family@26characte.rs">family@26characte.rs</a>
         </section>
 
+        <section id="location">
+            <p>Next to The o2</p>
+            <a title="Ravensbourne on Google Maps" href="http://goo.gl/maps/X0yHD">Google Map</a>
+        </section>
 
         <section id="logos">
-            <a href="http://www.rave.ac.uk/" title="Ravensbourne"><img class="rave" src="images/ravensbourne.svg" alt="Ravensbourn Logo"></a>
+            <a href="http://www.rave.ac.uk" title="Ravensbourne"><img class="rave" src="images/ravensbourne.svg" alt="Ravensbourn Logo"></a>
             <a href="http://thedegreeshow.com" title="The Degree Show, Ravensbourne 2013"><img class="show" src="images/the-degree-show.svg" alt="The Degree Show Logo"></a>
         </section>
+
+        <section id="staff">
+            <h3>Staff</h3>
+
+            <h4>Subject Leader</h4>
+            <address>Louise Prideaux</address>
+
+            <h4>Senior Lecturer</h4>
+            <address><a title="MWM Creative" href="http://www.mwmcreative.co.uk">Maaike van Neck</a></address>
+
+            <h4>Sessionals</h4>
+            <ol>
+                <li><address>Roland Brauchli</address></li>
+                <li><address><a title="MWM Creative" href="http://www.mwmcreative.co.uk">Maria da Gandra</a></address></li>
+                <li><address><a title="Atelier Dreibholz" href="http://http://dreibholz.com">Paulus Dreibholz</a></address></li>
+                <li><address><a title="Studio NMO" href="http://www.studionmo.co.uk">Nima Falatoori</a></address></li>
+                <li><address><a title="David Hunter" href="http://davidhunterdesign.com">David Hunter</a></address></li>
+                <li><address><a title="David Gibson" href="http://www.david-gibson.co.uk">David Gibson</a></address></li>
+                <li><address><a title="Catherine Nippe" href="http://www.cnippe.com">Catherine Nippe</a></address></li>
+                <li><address>Andrew Monk</address></li>
+                <li><address>Andrew Barnes–Jones</address></li>
+            </ol>
+        </section>
+
+
+        <ol id="the-family">
+            <li>
+                <figure>
+                    <div class="face letter-a">
+                        <img class="mug" src="images/mug/a.jpg" alt="Beatrice's Face">
+                        <img class="funny" src="images/funny/a.jpg" alt="Beatrice's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Beatrice <span class="surname">Akinyemi</span></address>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-b">
+                        <img class="mug" src="images/mug/b.jpg" alt="Adam's Face">
+                        <img class="funny" src="images/funny/b.jpg" alt="Adam's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Adam <span class="surname">Beckford</span></address>
+                        <a href="http://www.adambeckford.co.uk" title="Adam's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-c">
+                        <img class="mug" src="images/mug/c.jpg" alt="Alazne's Face">
+                        <img class="funny" src="images/funny/c.jpg" alt="Alazne's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Alazne <span class="surname">Ceberio Scobie</span></address>
+                        <a href="http://alazneclair.com" title="Alazne Ceberio Scobie's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-d">
+                        <img class="mug" src="images/mug/d.jpg" alt="Soofiya's Face">
+                        <img class="funny" src="images/funny/d.jpg" alt="Soofiya's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Soofiya <span class="surname">Chaudry</span></address>
+                        <a href="http://www.soofiya.com" title="Soofiya Chaudry's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-e">
+                        <img class="mug" src="images/mug/e.jpg" alt="Yun's Face">
+                        <img class="funny" src="images/funny/e.jpg" alt="Yun's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Yun <span class="surname">Kyung Choi</span></address>
+                        <a href="http://yunkyungchoi.com" title="Yun Kyung Choi's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-f">
+                        <img class="mug" src="images/mug/f.jpg" alt="Victoria's Face">
+                        <img class="funny" src="images/funny/f.jpg" alt="Victoria's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Victoria <span class="surname">Coppen</span></address>
+                        <a href="http://vjcgraphics.tumblr.com" title="Victoria Coppen's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-h">
+                        <img class="mug" src="images/mug/h.jpg" alt="Liam's Face">
+                        <img class="funny" src="images/funny/h.jpg" alt="Liam's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Liam <span class="surname">D&#8217;Arcy</span></address>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-i">
+                        <img class="mug" src="images/mug/i.jpg" alt="'s Face">
+                        <img class="funny" src="images/funny/i.jpg" alt="Adam's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Adam <span class="surname">Duckett</span></address>
+                        <a href="http://adamduckett.co.uk" title="Adam Duckett's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-j">
+                        <img class="mug" src="images/mug/j.jpg" alt="James' Face">
+                        <img class="funny" src="images/funny/j.jpg" alt="James' Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>James <span class="surname">Greenaway</span></address>
+                        <a href="http://greenaway.io" title="James Greenaway's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-k">
+                        <img class="mug" src="images/mug/k.jpg" alt="Calum's Face">
+                        <img class="funny" src="images/funny/k.jpg" alt="Calum's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Calum <span class="surname">Hale</span></address>
+                        <a href="http://" title="Calum Hale's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-l">
+                        <img class="mug" src="images/mug/l.jpg" alt="Charlotte's Face">
+                        <img class="funny" src="images/funny/l.jpg" alt="Charlotte's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Charlotte <span class="surname">Jennings</span></address>
+                        <a href="http://www.charlottejennings.co.uk" title="Charlotte Jennings's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-m">
+                        <img class="mug" src="images/mug/m.jpg" alt="Charlotte's Face">
+                        <img class="funny" src="images/funny/m.jpg" alt="Charlotte's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Charlotte <span class="surname">Knight</span></address>
+                        <a href="http://www.gingelondon.com" title="Charlotte Knight's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-n">
+                        <img class="mug" src="images/mug/n.jpg" alt="Charlotte's Face">
+                        <img class="funny" src="images/funny/n.jpg" alt="Charlotte's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Charlotte <span class="surname">Lander</span></address>
+                        <a href="http://charlottelander.co.uk" title="Charlotte Lander's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-o">
+                        <img class="mug" src="images/mug/o.jpg" alt="Natalie's Face">
+                        <img class="funny" src="images/funny/o.jpg" alt="Natalie's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Natalie <span class="surname">McCarthy</span></address>
+                        <a href="http://nataliemccarthy.co.uk" title="Natalie Mccarthy's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-p">
+                        <img class="mug" src="images/mug/p.jpg" alt="Felix's Face">
+                        <img class="funny" src="images/funny/p.jpg" alt="Felix's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Felix <span class="surname">Mooneeram</span></address>
+                        <a href="http://felixmooneeram.co.uk" title="Felix Mooneeram's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-q">
+                        <img class="mug" src="images/mug/q.jpg" alt="Trevor's Face">
+                        <img class="funny" src="images/funny/q.jpg" alt="Trevor's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Trevor <span class="surname">Morris</span></address>
+                        <a href="http://trevor.ms" title="Trevor Morris's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-r">
+                        <img class="mug" src="images/mug/r.jpg" alt="Rory's Face">
+                        <img class="funny" src="images/funny/r.jpg" alt="Rory's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Rory <span class="surname">Norton</span></address>
+                        <a href="http://rorynorton.co.uk" title="Rory Norton's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-r">
+                        <img class="mug" src="images/mug/r.jpg" alt="Ami's Face">
+                        <img class="funny" src="images/funny/r.jpg" alt="Ami's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Ami <span class="surname">O&#8217;Callaghan</span></address>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-u">
+                        <img class="mug" src="images/mug/u.jpg" alt="Luke's Face">
+                        <img class="funny" src="images/funny/u.jpg" alt="Luke's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Luke <span class="surname">Petty</span></address>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-v">
+                        <img class="mug" src="images/mug/v.jpg" alt="Luke's Face">
+                        <img class="funny" src="images/funny/v.jpg" alt="Luke's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Sam <span class="surname">Raymond</span></address>
+                        <a href="http://www.samraymond.co.uk" title="Sam Raymond's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-w">
+                        <img class="mug" src="images/mug/w.jpg" alt="Antony's Face">
+                        <img class="funny" src="images/funny/w.jpg" alt="Antony's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Antony <span class="surname">Victor</span></address>
+                        <a href="http://www.antonyvictor.co.uk" title="Antony Victor's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-x">
+                        <img class="mug" src="images/mug/x.jpg" alt="Sean's Face">
+                        <img class="funny" src="images/funny/x.jpg" alt="Sean's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Sean <span class="surname">Williamson</span></address>
+                        <a href="http://www.seanwilliamson.co.uk" title="Sean Williamson's website"></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div class="face letter-z">
+                        <img class="mug" src="images/mug/z.jpg" alt="Meng's Face">
+                        <img class="funny" src="images/funny/z.jpg" alt="Meng's Funny Face">
+                    </div>
+                    <ul>
+                        <li><img src="images/portfolio/" alt=""></li>
+                    </ul>
+                    <figcaption>
+                        <address>Meng <span  class="surname">Jia Xu</span></address>
+                    </figcaption>
+                </figure>
+            </li>
+        </ol>
+
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
+        <!--
         <script>
             var _gaq=[['_setAccount','UA-40905482-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+        -->
 
 </body>
 </html>

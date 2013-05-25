@@ -5,20 +5,8 @@
 
 $default-transition-duration: 0.3s;
 
-
 body {
-    font-family:'Univers LT W01 55 Roman', sans-serif;
-    //font-family: Georgia, sans-serif;
     min-height: 100%;
-}
-
-.names.tutors li {
-    font-family:'UniversLTW01-55Oblique', sans-serif;
-}
-
-* {
-    font-weight: 300 !important;
-    @include box-sizing( border-box );
 }
 
 
@@ -49,8 +37,8 @@ h1, h2, h3, h4, h5, p, ul, ol {
 /*
     Colors
  */
-$body: #000;
-$bg: #F5F5F5;
+$body: #000000;
+$bg: #ffffff;
 $accent: #0000ff;
 
 body {
@@ -66,24 +54,12 @@ a {
 
 ::-moz-selection {
     background: $accent;
-    color: #ffffff;
+    color: $body;
 }
 ::selection {
     background: $accent;
-    color: #ffffff;
-}
-
-#the-family,
-h1 {
-    color: $accent;
-}
-
-.where, .where a {
-    //color: adjust-lightness( $body, 26% );
     color: $body;
 }
-
-
 
 
 /*
@@ -96,7 +72,7 @@ ul, ol {
 }
 
 section {
-    padding: 0 2rem;
+
 }
 
 img {
@@ -104,6 +80,13 @@ img {
     height: auto;
 }
 
+
+
+
+
+
+
+// Logos
 #logos {
     clear: both;
     padding-bottom: 2rem;
@@ -133,98 +116,40 @@ img {
         padding-right: 3rem;
     }
 
+
+
+
+
+
+
 /*
     Breakpoints
 */
 
 @media only screen and (max-width: 380px) {
 
-    h1 {
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-
 }
 
 
 @media only screen and (min-width: 420px) {
-
-    .names {
-        @include column-count(2);
-    }
-
-    #logos {
-        width: 50%;
-    }
 
 }
 
 
 @media only screen and (min-width: 710px) {
 
-    .names {
-        @include column-count(1);
-    }
-
-    #intro,
-    #the-family,
-    #soon {
-        float: left;
-    }
-
-    #intro {
-        width: 50%;
-    }
-
-    #the-family,
-    #soon {
-        width: 25%;
-    }
-
-    #logos {
-        width: 26rem;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
 }
 
 
 @media only screen and (min-width: 920px) {
-    html {
-        font-size: 70%;
-    }
+    // html {
+    //     font-size: 70%;
+    // }
 }
 
 @media only screen and (min-width: 1100px) {
-    html {
-        font-size: 80%;
-    }
+    // html {
+    //     font-size: 80%;
+    // }
 }
 
-
-/*
-    iOS Zoom bug fix
- */
-/* iPhone */
-@media only screen and (width:320px) and (device-width:320px) and (device-height:480px) and (orientation: landscape) {
-    body {
-        -webkit-transform: scale(0.667);
-        -webkit-transform-origin: top right;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 480px;
-    }
-}
-/* iPad */
-@media only screen and (width:768px) and (device-width:768px) and (device-height:1024px) and (orientation: landscape) {
-    body {
-        -webkit-transform: scale(0.75);
-        -webkit-transform-origin: top right;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 1024px;
-    }
-}
