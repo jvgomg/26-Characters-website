@@ -5,10 +5,23 @@
 
 $default-transition-duration: 0.3s;
 
-body {
-    min-height: 100%;
+@mixin karben-normal {
+    font-family: Karben105Mono,"Lucida Console", Monaco, monospace;
+    font-weight: normal;
+    font-style: normal;
 }
 
+@mixin karben-italic {
+    font-family: Karben105Mono, "Lucida Console", Monaco, monospace;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+body {
+    min-height: 100%;
+    @include karben-normal;
+}
 
 /*
     Typography scale
@@ -27,6 +40,7 @@ h1 {
 p, li {
     font-size: 1.5rem;
     line-height: 2rem;
+    @include karben-italic;
 }
 
 h1, h2, h3, h4, h5, p, ul, ol {
