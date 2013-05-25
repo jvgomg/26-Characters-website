@@ -22,19 +22,19 @@
         <meta property="og:description"content="" />
         <meta property="og:type" content="Website"/>
 
-        <!-- build:js scripts/vendor/head.js -->
-        <script src="scripts/vendor/modernizr.custom.js"></script>
         <script>
-            //var woffEnabled = false;
             var customPath = "http://localhost:9000";
         </script>
+
+        <!-- build:js scripts/vendor/head.js -->
+        <script src="scripts/vendor/modernizr.custom.js"></script>
         <script src="scripts/MyFontsWebfontsKit.js"></script>
         <!-- endbuild -->
 
         <script>
             Modernizr.load({
                 test: Modernizr.cssremunit,
-                nope: '/scripts/vendor/js/rem.min.js'
+                nope: '/scripts/vendor/rem.min.js'
             });
         </script>
 

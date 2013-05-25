@@ -271,7 +271,9 @@ module.exports = function (grunt) {
                         '*.{ico,txt}',
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
-                        'styles/fonts/*'
+                        'images/portfolio/{,*/}*',
+                        'webfonts/*',
+                        '/scripts/vendor/rem.min.js'
                     ]
                 }]
             }
