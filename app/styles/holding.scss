@@ -1,0 +1,230 @@
+@import "_normalize.scss";
+@import "compass/css3/box-sizing";
+@import "compass/css3/transition";
+@import "compass/css3/columns";
+
+$default-transition-duration: 0.3s;
+
+
+body {
+    font-family:'Univers LT W01 55 Roman', sans-serif;
+    //font-family: Georgia, sans-serif;
+    min-height: 100%;
+}
+
+.names.tutors li {
+    font-family:'UniversLTW01-55Oblique', sans-serif;
+}
+
+* {
+    font-weight: 300 !important;
+    @include box-sizing( border-box );
+}
+
+
+/*
+    Typography scale
+*/
+
+html {
+    font-size: 62.6%;
+}
+
+h1 {
+    font-size: 3.6rem;
+    line-height: 4rem;
+    letter-spacing: -0.15rem;
+}
+
+p, li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h1, h2, h3, h4, h5, p, ul, ol {
+    margin: 2rem 0;
+}
+
+
+/*
+    Colors
+ */
+$body: #000000;
+$bg: #ffffff;
+$accent: #0000ff;
+
+body {
+    background-color: $bg;
+    color: $body;
+}
+
+a {
+    color: $accent;
+    text-decoration: none;
+    border-bottom: 1px solid $accent;
+}
+
+::-moz-selection {
+    background: $accent;
+    color: #ffffff;
+}
+::selection {
+    background: $accent;
+    color: #ffffff;
+}
+
+#the-family,
+h1 {
+    color: $accent;
+}
+
+.where, .where a {
+    //color: adjust-lightness( $body, 26% );
+    color: $body;
+}
+
+
+
+
+/*
+    Base
+*/
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+section {
+    padding: 0 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#logos {
+    clear: both;
+    padding-bottom: 2rem;
+    overflow: hidden;
+
+    a {
+        border: none;
+    }
+
+    img {
+        width: 44%;
+        float: left;
+
+        opacity: 0.5;
+        @include transition();
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+    .rave {
+        margin-right: 6%;
+        margin-top: 3%;
+    }
+    .show {
+        padding-right: 3rem;
+    }
+
+/*
+    Breakpoints
+*/
+
+@media only screen and (max-width: 380px) {
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 420px) {
+
+    .names {
+        @include column-count(2);
+    }
+
+    #logos {
+        width: 50%;
+    }
+
+}
+
+
+@media only screen and (min-width: 710px) {
+
+    .names {
+        @include column-count(1);
+    }
+
+    #intro,
+    #the-family,
+    #soon {
+        float: left;
+    }
+
+    #intro {
+        width: 50%;
+    }
+
+    #the-family,
+    #soon {
+        width: 25%;
+    }
+
+    #logos {
+        width: 26rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+
+@media only screen and (min-width: 920px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+
+/*
+    iOS Zoom bug fix
+ */
+/* iPhone */
+@media only screen and (width:320px) and (device-width:320px) and (device-height:480px) and (orientation: landscape) {
+    body {
+        -webkit-transform: scale(0.667);
+        -webkit-transform-origin: top right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 480px;
+    }
+}
+/* iPad */
+@media only screen and (width:768px) and (device-width:768px) and (device-height:1024px) and (orientation: landscape) {
+    body {
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin: top right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1024px;
+    }
+}
