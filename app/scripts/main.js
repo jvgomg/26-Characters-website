@@ -23,7 +23,6 @@ require(['jquery'], function ($) {
             $awardType = $award.find('abbr').appendTo($newAwardType);
 
 
-
         // Fade page in
         var $body = $('body').removeClass('fadedOut').addClass('fadeIn');
     });

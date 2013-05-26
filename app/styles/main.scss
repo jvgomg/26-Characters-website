@@ -9,6 +9,8 @@
 
 $default-transition-duration: 0.3s;
 
+$left-margin: 8.4rem;
+
 @mixin karben-normal {
     font-family: Karben105Mono,"Lucida Console", Monaco, monospace;
     font-weight: normal;
@@ -118,6 +120,7 @@ section {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 /*
@@ -134,28 +137,27 @@ img {
 /*
     Page header
  */
-
 #header {
     position: fixed;
     top: 3rem;
-    left: 8.4rem;
+    left: $left-margin;
 
     nav {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 100;
+        z-index: 1000;
     }
 
     h1 {
         position: relative;
-        z-index: 100;
+        z-index: 1000;
 
         @include spaces(3);
     }
 
     h2 {
-        z-index: -100;
+        z-index: -1000;
     }
 
     .award {
@@ -177,11 +179,58 @@ img {
 }
 
 
+/*
+    Family
+ */
 #family {
     position: relative;
     top: 11.2*5rem;
+
+    margin-left: 2.7rem;
+    margin-right: 2.7rem;
+
+    & > li {
+        overflow: hidden;
+
+        width: 33.3333332%;
+        float: left;
+    }
 }
 
+figure {
+
+    img {
+
+    }
+
+    p {
+        display: block;
+    }
+
+    .face {
+        position: relative;
+
+        img {
+            position: absolute;
+
+            &:first-child {
+                z-index: 100;
+            }
+
+        }
+
+    }
+    .portfolio {
+        li {
+
+        }
+
+    }
+
+    figcaption {
+
+    }
+}
 
 
 
