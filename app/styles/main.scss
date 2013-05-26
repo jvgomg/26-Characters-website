@@ -61,7 +61,12 @@ h1, h2 {
 
 p, a, li {
     font-size: 2rem;
-    font-size: 2.8rem;
+    line-height: 2.8rem;
+}
+
+a:hover, a.static {
+    font-style: italic;
+    border: none;
 }
 
 
@@ -119,7 +124,7 @@ img {
     Effects
  */
 .js .fadedOut {
-    opacity: 0;
+    //opacity: 0;
 }
 .fadeIn {
     @include animate(fadeIn, 1s, 0.75s);
@@ -133,22 +138,41 @@ img {
 #header {
     position: fixed;
     top: 3rem;
-    left: 9.5rem;
+    left: 8.4rem;
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
 
     h1 {
-
         position: relative;
         z-index: 100;
 
-        &:before {
-            display: inline;
-            @include spaces(3);
-        }
+        @include spaces(3);
     }
 
     h2 {
         z-index: -100;
+    }
+
+    .award {
         margin-top: 11.2rem;
+        @include spaces(6);
+    }
+
+    .award-type {
+        @include spaces(0);
+    }
+
+    .school {
+        @include spaces(0);
+    }
+
+    .school .year {
+        @include spaces(4);
     }
 }
 

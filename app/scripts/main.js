@@ -19,8 +19,9 @@ require(['jquery'], function ($) {
 
         // Split award into 2 lines
         var $award = $('#header .award'),
-            $newAwardType = $('<h2>').insertAfter($award),
+            $newAwardType = $('<h2 class="award-type">').insertAfter($award),
             $awardType = $award.find('abbr').appendTo($newAwardType);
+
 
 
         // Fade page in

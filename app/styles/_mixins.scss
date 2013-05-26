@@ -9,5 +9,8 @@
         }
     }
 
-    content: $content;
+    &:before {
+        content: $content;
+        display: inline;
+    }
 }
