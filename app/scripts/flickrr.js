@@ -1,5 +1,5 @@
 /*global console */
-define('flick', ['jquery'], function ($) {
+define('flickrr', ['jquery'], function ($) {
     'use strict';
 
     /*
@@ -11,11 +11,7 @@ define('flick', ['jquery'], function ($) {
     var speed = 500;
 
 
-    /*
-        Private vars
-     */
     var profileInit = function( profile ) {
-        console.log('New profile');
 
         var $images = $(profile).find('img'),
             current = 0,
@@ -24,7 +20,6 @@ define('flick', ['jquery'], function ($) {
             flickStarted = false,
             flickInterval;
 
-            console.log($images);
 
         function flick() {
             if ( !flickDie ) {
@@ -73,7 +68,7 @@ define('flick', ['jquery'], function ($) {
 
 
     /*
-        Public Functions
+        Public
      */
     var setup = function() {
         console.log('Setting up Flickrr');
@@ -91,6 +86,7 @@ define('flick', ['jquery'], function ($) {
 
         });
 
+        console.log('Flickrr setup complete');
     };
 
 

@@ -98,7 +98,17 @@
         top: $processingRem+rem;
     }
 }
+@mixin rBottom($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
 
+    @if $remuxFallback == true {
+        bottom: $value*1px;
+        bottom: $processingRem+rem;
+    }
+    @else {
+        bottom: $processingRem+rem;
+    }
+}
 @mixin rLeft($value) {
   $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
 
@@ -108,6 +118,17 @@
     }
     @else {
         left: $processingRem+rem;
+    }
+}
+@mixin rRight($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        right: $value*1px;
+        right: $processingRem+rem;
+    }
+    @else {
+        right: $processingRem+rem;
     }
 }
 

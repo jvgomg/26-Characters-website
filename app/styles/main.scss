@@ -1,3 +1,5 @@
+@import "compass";
+
 @import "_normalize.scss";
 
 @import "_mixins.scss";
@@ -59,13 +61,14 @@ h1, h2 {
     @include rFontSize( 112 );
     @include rLineHeight( 112 );
 
-    letter-spacing: 0.6rem;
+    @include rLetterSpacing( 8.15 );
     margin: 0;
 }
 
 p, a, li {
     @include rFontSize( 20 );
     @include rLineHeight( 28 );
+    @include rLetterSpacing( 0.75 );
 }
 
 a:hover, a.static {
@@ -164,7 +167,6 @@ img {
 #header {
     position: fixed;
     @include rTop( 28 * 1 );
-    @include rLeft( 84 );
 
     width: 110%;
 
@@ -215,38 +217,77 @@ $rwidth: 1575;
     left: 0;
 }
 
+// Width and height of type
+$spaceX: 15.5;
+$spaceY: 28 / 2;
+
+$xShift: -2;
+$yShift: -3;
+
+$captionCords: (
+    (12, 24),
+    (8, 28),
+    (12, 26),
+    (8, 24),
+    (16, 22),
+    (6, 26),
+    (10, 24),
+    (8, 26),
+    (20, 20),
+    (10, 20)
+);
+
+$captionCordsLength: length($captionCords);
+
+@for $i from 1 through $captionCordsLength {
+
+    $xy: nth( $captionCords, $i );
+    $x: nth( $xy, 1 );
+    $y: nth( $xy, 2 );
+
+    .caption-#{$i} {
+        @include rLeft( $spaceX *  ( $xShift + $x ) );
+        @include rTop( $spaceY *  ( $yShift +$y ) );
+    }
+}
+
+
+
 /*
     Family
  */
 #family {
-    position: relative;
     @include rMarginTop(28 * 23);
 
     //@include rMarginLeft( ( 84 / 2 ) - 5 );
     //@include rMarginRight( ( 84 / 2 ) - 5 );
 
     & > li {
-        overflow: hidden;
+        @include rWidth( $rwidth / 16 * 5  );
+        @include rMinHeight( 512 );
 
-        @include rWidth( $rwidth / 3 );
+        position: relative;
         float: left;
     }
 }
 
 figure {
-    position: relative;
-    @include rMinHeight( 420 );
+
+    img, figcaption {
+        cursor: crosshair;
+    }
 
     img {
-        cursor: crosshair;
-        position: absolute
+        position: absolute;
     }
 
     .face {
         position: relative;
-        @include rLeft( 62 );
+        @include rLeft( $spaceX * 6 );
+        @include rTop( $spaceY * 2 );
 
         img {
+            position: absolute;
             @include rMaxHeight( 242 );
 
             &:first-child {
@@ -265,7 +306,7 @@ figure {
         }
 
         img {
-            @include rMaxWidth( 500 );
+            @include rMaxWidth( 512 );
             @include rMaxHeight( 320 );
         }
 
@@ -280,9 +321,6 @@ figure {
     figcaption {
         position: absolute;
         z-index: 300;
-
-        @include rTop( 244 );
-        @include rLeft( 124 );
     }
 }
 
