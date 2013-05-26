@@ -235,6 +235,7 @@ figure {
 
     img {
         cursor: crosshair;
+        position: absolute
     }
 
     .face {
@@ -242,7 +243,6 @@ figure {
         @include rLeft( 62 );
 
         img {
-            position: absolute;
             @include rMaxHeight( 242 );
 
             &:first-child {
