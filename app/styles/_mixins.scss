@@ -99,6 +99,18 @@
     }
 }
 
+@mixin rLeft($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        left: $value*1px;
+        left: $processingRem+rem;
+    }
+    @else {
+        left: $processingRem+rem;
+    }
+}
+
 
 @mixin rMaxWidth($value) {
   $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);

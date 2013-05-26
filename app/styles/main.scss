@@ -207,12 +207,12 @@ figure {
     @include rMinHeight( 420 );
 
     img {
-
+        cursor: crosshair;
     }
 
     .face {
         position: relative;
-        margin-left: 100/16%;
+        @include rLeft( 62 );
 
         img {
             position: absolute;
@@ -231,7 +231,7 @@ figure {
         }
 
         img {
-            @include rMaxWidth( 512 );
+            @include rMaxWidth( 500 );
             @include rMaxHeight( 320 );
         }
 
@@ -242,7 +242,7 @@ figure {
         z-index: 110;
 
         @include rTop( 244 );
-        left: 4vw;
+        @include rLeft( 124 );
     }
 }
 
