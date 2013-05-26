@@ -100,6 +100,58 @@
 }
 
 
+@mixin rMaxWidth($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        max-width: $value*1px;
+        max-width: $processingRem+rem;
+    }
+    @else {
+        max-width: $processingRem+rem;
+    }
+}
+
+@mixin rMaxHeight($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        max-height: $value*1px;
+        max-height: $processingRem+rem;
+    }
+    @else {
+        max-height: $processingRem+rem;
+    }
+}
+
+@mixin rMinWidth($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        Min-width: $value*1px;
+        Min-width: $processingRem+rem;
+    }
+    @else {
+        Min-width: $processingRem+rem;
+    }
+}
+
+@mixin rMinHeight($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        Min-height: $value*1px;
+        Min-height: $processingRem+rem;
+    }
+    @else {
+        Min-height: $processingRem+rem;
+    }
+}
+
+
+
+
+
 @mixin rmux( $property, $value) {
   $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
 

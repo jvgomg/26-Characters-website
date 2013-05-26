@@ -166,7 +166,7 @@ img {
     }
 
     .award {
-        margin-top: 11.2rem;
+        @include rMarginTop(112);
         @include spaces(6);
     }
 
@@ -203,8 +203,8 @@ img {
 }
 
 figure {
-
-    min-height: 48rem;
+    position: relative;
+    @include rMinHeight( 420 );
 
     img {
 
@@ -216,6 +216,7 @@ figure {
 
         img {
             position: absolute;
+            @include rMaxHeight( 242 );
 
             &:first-child {
                 z-index: 100;
@@ -230,8 +231,8 @@ figure {
         }
 
         img {
-            max-width: 32rem;
-            max-height: 32rem;
+            @include rMaxWidth( 512 );
+            @include rMaxHeight( 320 );
         }
 
     }
@@ -239,6 +240,9 @@ figure {
     figcaption {
         position: absolute;
         z-index: 110;
+
+        @include rTop( 244 );
+        left: 4vw;
     }
 }
 
