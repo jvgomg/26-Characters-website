@@ -1,0 +1,13 @@
+
+@mixin spaces($number) {
+
+    $content: "";
+
+    @for $i from 1 through $number {
+        .item-#{$i} {
+            $content: $content+"\00a0";
+        }
+    }
+
+    content: $content;
+}
