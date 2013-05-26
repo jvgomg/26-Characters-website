@@ -2,6 +2,7 @@
 
 @import "_mixins.scss";
 @import "_animate.sass";
+@import "_letters.scss";
 
 @import "compass/css3/box-sizing";
 @import "compass/css3/transition";
@@ -40,6 +41,10 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 abbr[title] {
     border: none;
+}
+
+address {
+    font-style: normal;
 }
 
 /*

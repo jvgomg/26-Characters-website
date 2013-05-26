@@ -1,0 +1,73 @@
+$letters: (a, b, c, d, e, f, h, i, j, k, l, m, n, o, p, q, r, s, u, v, w, x, z);
+
+$fonts: (
+    'JosefinSlab-SemiBold',
+    'GillSansBook',
+    'CHANGE',
+    'Crimson Text',
+    'Zurich WGL Roman',
+    'Lobster',
+    'Chaparral Pro Bold',
+    'Univers 55',
+    'Inconsolata Bold',
+    'CHANGE',
+    'ITC Caslon 224 medium',
+    'Neue Helvetica 35 Thin',
+    'Effra Bold',
+    'Joanna regular',
+    'Courier New',
+    'Futura CE Medium',
+    'Din Neuzeit Grotesk Bold Condensed',
+    'Perpetua',
+    'Nunito',
+    'Neo Sans Regular',
+    'CHANGE Akzidenz-Grotesk BQ_Medium',
+    'Georgia',
+    'Arial Rounded MT Bold'
+);
+
+/*
+Josefin Slab - SemiBold
+Gill Sans Book
+CHANGE Akzidenz Grotesk Light
+Mrs Eaves Italic (print) Crimson Text (web)
+Zurich WGL Roman
+Lobster
+NA
+Chaparral Pro Bold
+Univers 55
+Inconsolata Bold
+CHANGE Gotham medium
+ITC Caslon 224 medium
+Neue Helvetica 35 Thin
+Effra Bold
+Joanna regular
+Courier New
+Futura CE Medium
+Din Neuzeit Grotesk Bold Condensed
+Perpetua
+NA
+Nunito
+Neo Sans Regular
+CHANGE Akzidenz-Grotesk BQ_Medium
+Georgia
+Arial Rounded MT Bold
+*/
+
+$lettersLength: length($letters);
+
+@for $i from 1 through $lettersLength {
+
+    $letter: nth($letters, $i);
+
+    #letter-#{$letter} {
+
+        .surname {
+            font-family: nth($fonts, $i), Karben105Mono,"Lucida Console", Monaco, monospace;
+        }
+    }
+
+    .font-#{letter} {
+        font-family: nth($fonts, $i), Karben105Mono,"Lucida Console", Monaco, monospace;
+    }
+}
