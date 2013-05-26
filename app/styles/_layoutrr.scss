@@ -1,0 +1,35 @@
+// Width and height of type
+$spaceX: 15.5;
+$spaceY: 28 / 2;
+
+$xShift: -2;
+$yShift: -3;
+
+$captionCords: (
+    (12, 24),
+    (8, 28),
+    (12, 26),
+    (8, 24),
+    (16, 22),
+    (6, 26),
+    (10, 24),
+    (8, 26),
+    (20, 20),
+    (10, 20)
+);
+
+$captionCordsLength: length($captionCords);
+
+@for $i from 1 through $captionCordsLength {
+
+    $xy: nth( $captionCords, $i );
+    $x: nth( $xy, 1 );
+    $y: nth( $xy, 2 );
+
+    .caption-#{$i} {
+        @include rLeft( $spaceX *  ( $xShift + $x ) );
+        @include rTop( $spaceY *  ( $yShift +$y ) );
+    }
+}
+
+

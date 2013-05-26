@@ -2,18 +2,20 @@
 
 @import "_normalize.scss";
 
+$fontsize-base: 16;
+$remuxFallback: true;
+
 @import "_mixins.scss";
 @import "_animate.sass";
 @import "_letters.scss";
+
+@import "_layoutrr.scss";
 
 @import "compass/css3/box-sizing";
 @import "compass/css3/transition";
 @import "compass/css3/columns";
 
 $default-transition-duration: 0.3s;
-
-$fontsize-base: 16;
-$remuxFallback: true;
 
 @mixin karben-normal {
     font-family: Karben105Mono,"Lucida Console", Monaco, monospace;
@@ -217,40 +219,6 @@ $rwidth: 1575;
     left: 0;
 }
 
-// Width and height of type
-$spaceX: 15.5;
-$spaceY: 28 / 2;
-
-$xShift: -2;
-$yShift: -3;
-
-$captionCords: (
-    (12, 24),
-    (8, 28),
-    (12, 26),
-    (8, 24),
-    (16, 22),
-    (6, 26),
-    (10, 24),
-    (8, 26),
-    (20, 20),
-    (10, 20)
-);
-
-$captionCordsLength: length($captionCords);
-
-@for $i from 1 through $captionCordsLength {
-
-    $xy: nth( $captionCords, $i );
-    $x: nth( $xy, 1 );
-    $y: nth( $xy, 2 );
-
-    .caption-#{$i} {
-        @include rLeft( $spaceX *  ( $xShift + $x ) );
-        @include rTop( $spaceY *  ( $yShift +$y ) );
-    }
-}
-
 
 
 /*
@@ -283,8 +251,6 @@ figure {
 
     .face {
         position: relative;
-        @include rLeft( $spaceX * 6 );
-        @include rTop( $spaceY * 2 );
 
         img {
             position: absolute;
