@@ -246,7 +246,10 @@ figure {
             @include rMaxHeight( 242 );
 
             &:first-child {
-                z-index: 100;
+                z-index: 200;
+            }
+            &:nth-child(2) {
+                z-index: 199;
             }
 
         }
@@ -257,9 +260,19 @@ figure {
             position: absolute;
         }
 
+
+        @for $i from 1 through 10 {
+            li:nth-child(#{$i}) img{
+                z-index: 199 - $i;
+            }
+        }
+
+
+
         img {
             @include rMaxWidth( 500 );
             @include rMaxHeight( 320 );
+            //z-index: 100;
         }
 
     }

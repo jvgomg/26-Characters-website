@@ -2,113 +2,73 @@
 define('flick', ['jquery'], function ($) {
     'use strict';
 
-    var $family,
-        $profiles,
-        inQuestion,
-        checkProfile;
-
-    var speed = 1000,
-        stopSpeed = 100;
-
-    var intervalTick,
-        stopTime;
-
-    var flickDecks = {};
-
-
-    var setupNewFlickDeck = function( id, profile) {
-
-        var deck = {},
-            images = $(profile).find('img');
-
-        deck.currentImage = 0;
-        deck.lastZ = 0;
-        deck.images = images;
-
-        flickDecks[id] = deck;
-    };
-
     /*
-        Private key
+        Private
      */
-    var flickThrough = function( profile ) {
+    var $family = $('#family'),
+        $profiles = $family.children('li').children('figure');
 
-        console.log('Tick');
-
-        var id = $(profile).attr('id');
-
-        // set up new gallery if needed
-        if ( ! flickDecks[id] ) {
-            console.log('New ID');
-            setupNewFlickDeck( id, profile );
-        }
-
-        console.log( flickDecks );
-        console.log( flickDecks[id].images.length );
-
-        // bring next image to the top
-
-        flickDecks[id].currentImage ++;
-        flickDecks[id].lastZ += 100;
-
-        if ( flickDecks[id].currentImage == flickDecks[id].images.length ) {
-            flickDecks[id].currentImage = 0;
-        }
-
-        var nextImageIndex = flickDecks[id].currentImage;
-        var nextZIndex = flickDecks[id].lastZ;
-        var nextImage = flickDecks[id].images[flickDecks[id].currentImage];
-
-        console.log( nextImageIndex );
-        console.log( nextZIndex );
-        console.log( nextImage );
-
-        $(nextImage).css('z-index', nextZIndex);
-
-        //$(flickDecks[id].images[flickDecks[id].currentImage]).style('z-index', newZIndex);
-
-    };
+    var speed = 500;
 
 
     /*
-        Private fire
+        Private vars
      */
-    var tick = function() {
-        if( !inQuestion ){
-            window.clearInterval(intervalTick);
-        } else {
-            //console.log( inQuestion );
-            flickThrough( inQuestion );
+    var profileInit = function( profile ) {
+        console.log('New profile');
+
+        var $images = $(profile).find('img'),
+            current = 0,
+            lastZ = 200,
+            flickDie = false,
+            flickStarted = false,
+            flickInterval;
+
+            console.log($images);
+
+        function flick() {
+            if ( !flickDie ) {
+                // Increment
+                current ++;
+                lastZ = lastZ + 1;
+
+                // Back to the begining
+                if ( current === $images.length ) {
+                    current = 0;
+                }
+                // bring next image to the top
+                $($images.get(current)).css('z-index', lastZ);
+
+            } else {
+                window.clearInterval(flickInterval);
+                flickStarted = false;
+            }
         }
-    };
 
-    var startFlick = function(element) {
-        inQuestion = element;
-        tick();
-        intervalTick = setInterval(tick, speed);
-    };
-
-    var stopFlick = function(){
-        //console.log('Stop');
-        inQuestion = null;
-        window.clearInterval(intervalTick);
-    };
-
-    var checkTheStop = function() {
-        //console.log('check stop');
-        if ( !$(checkProfile).data('flicking') || !inQuestion ) {
-            stopFlick();
+        function startFlick() {
+            flickStarted = true;
+            flick();
+            flickInterval = setInterval(flick, speed);
         }
-    };
 
-    var startTheStop = function(profile) {
-        //console.log('start the stop');
-        checkProfile = profile;
-        stopTime = setTimeout(checkTheStop, stopSpeed);
-    };
+        // Mouse enter
+        $(profile).on('mouseenter', 'img', function(e){
 
-    var isInQuestion = function(element) {
-        return $(element).get(0) === $(inQuestion).get(0);
+            flickDie = false;
+
+            if ( !flickStarted ) {
+                startFlick();
+            }
+
+        });
+
+        // Mouse leave
+        $(profile).on('mouseleave', 'img', function(e){
+
+            flickDie = true;
+
+        });
+
     };
 
 
@@ -118,35 +78,19 @@ define('flick', ['jquery'], function ($) {
     var setup = function() {
         console.log('Setting up Flickrr');
 
-        $family = $('#family');
-        $profiles = $family.children('li').children('figure');
-
         // DOM Ready
         $(function() {
 
-            // Mouse enter
-            $profiles.on('mouseenter', 'img', function(e){
-                //console.log('in');
+            // Scope to each of the profiles
+            $profiles.each(function(i, that){
 
-                var profile = $(this).closest('figure').data('flicking', true);
+                // Setup profiles
+                profileInit(this);
 
-                if ( !isInQuestion( profile ) ) {
-                    //console.log('new');
-                    startFlick(profile);
-                }
-            });
-
-            // Mouse leave
-            $profiles.on('mouseleave', 'img', function(e){
-                //console.log('out');
-
-                var profile = $(this).closest('figure').data('flicking', false);
-
-                // Set up stop function
-                startTheStop( profile );
             });
 
         });
+
     };
 
 
