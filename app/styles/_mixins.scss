@@ -14,3 +14,103 @@
         display: inline;
     }
 }
+
+
+@mixin rFontSize($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        font-size: $value*1px;
+        font-size: $processingRem+rem;
+    }
+    @else {
+        font-size: $processingRem+rem;
+    }
+}
+
+@mixin rLineHeight($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        line-height: $value*1px;
+        line-height: $processingRem+rem;
+    }
+    @else {
+        line-height: $processingRem+rem;
+    }
+}
+
+@mixin rLetterSpacing($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        letter-spacing: $value*1px;
+        letter-spacing: $processingRem+rem;
+    }
+    @else {
+        letter-spacing: $processingRem+rem;
+    }
+}
+
+@mixin rMarginLeft($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        margin-left: $value*1px;
+        margin-left: $processingRem+rem;
+    }
+    @else {
+        margin-left: $processingRem+rem;
+    }
+}
+@mixin rMarginRight($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        margin-right: $value*1px;
+        margin-right: $processingRem+rem;
+    }
+    @else {
+        margin-right: $processingRem+rem;
+    }
+}
+@mixin rMarginTop($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        margin-top: $value*1px;
+        margin-top: $processingRem+rem;
+    }
+    @else {
+        margin-top: $processingRem+rem;
+    }
+}
+
+
+@mixin rTop($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        top: $value*1px;
+        top: $processingRem+rem;
+    }
+    @else {
+        top: $processingRem+rem;
+    }
+}
+
+
+@mixin rmux( $property, $value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        $property: $value*1px;
+        $property: $processingRem+rem;
+    }
+    @else {
+        $property: $processingRem+rem;
+    }
+}
+
+
+
