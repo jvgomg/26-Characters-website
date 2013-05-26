@@ -24,6 +24,8 @@ require(['jquery', 'flickrr', 'layoutrr'], function ($, flickrr, layoutrr) {
             $newAwardType = $('<h2 class="award-type">').insertAfter($award),
             $awardType = $award.find('abbr').appendTo($newAwardType);
 
+        $award.html( $award.html().trim() );
+
         // Add layout classes
         layoutrr.setup( $family );
 
