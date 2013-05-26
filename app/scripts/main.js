@@ -2,14 +2,15 @@
 
 require.config({
     paths: {
-        jquery: '../components/jquery/jquery'
+        jquery: '../components/jquery/jquery',
+        flick: 'flick'
     },
     shim: {
     }
 });
 
 
-require(['jquery'], function ($) {
+require(['jquery', 'flick'], function ($, flick) {
     'use strict';
     // use app here
 
@@ -21,6 +22,10 @@ require(['jquery'], function ($) {
         var $award = $('#header .award'),
             $newAwardType = $('<h2 class="award-type">').insertAfter($award),
             $awardType = $award.find('abbr').appendTo($newAwardType);
+
+
+        // Set up mouse hover flick through effect
+        flick.setup();
 
 
         // Fade page in
