@@ -124,6 +124,11 @@ define('layoutrr', ['jquery'], function ($) {
         generateClasses();
     };
 
+    var destroy = function() {
+        console.log('Layoutrr Destroy');
+        dropClasses();
+    };
+
     var setup = function( family ) {
         console.log('Layoutrr Setup started');
 
@@ -141,6 +146,7 @@ define('layoutrr', ['jquery'], function ($) {
 
     return {
         setup: setup,
-        refresh: refresh
+        refresh: refresh,
+        destroy: destroy
     };
 });
