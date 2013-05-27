@@ -274,9 +274,9 @@ module.exports = function (grunt) {
                         'images/portfolio/{,*/}*',
                         'images/mug/*',
                         'images/funny/*',
-                        'webfonts/*',
-                        '/scripts/vendor/rem.min.js',
-                        'share.jpg'
+                        'scripts/vendor/rem.min.js',
+                        'share.jpg',
+                        'scripts/webfonts/*'
                     ]
                 }]
             }
