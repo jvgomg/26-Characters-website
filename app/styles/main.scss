@@ -147,7 +147,6 @@ section {
 }
 
 img {
-    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -272,8 +271,8 @@ figure {
         }
 
         img {
-            @include rMaxWidth( 512 );
-            @include rMaxHeight( 320 );
+            //@include rMaxWidth( 512 );
+            //@include rMaxHeight( 320 );
         }
 
         @for $i from 1 through 10 {

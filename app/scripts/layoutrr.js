@@ -11,14 +11,16 @@ define('layoutrr', ['jquery'], function ($) {
         $faces;
 
     var CaptionLayouts = 10,
-        ImageLayoutsLandscape = 20,
-        ImageLayoutsPortrait = 10,
-        FaceLayouts = 10;
+        ImageLayoutsLandscape = 75,
+        ImageLayoutsPortrait = 75,
+        FaceLayouts = 75;
+
 
     var getRandom = function (min, max) {
         return min + Math.floor(Math.random() * (max - min + 1));
     };
 
+    // Caption class toggle
     var addCaptionClasses = function( $captions ) {
 
         $captions.each(function(i){
@@ -33,7 +35,7 @@ define('layoutrr', ['jquery'], function ($) {
     };
 
 
-    //
+    // Image class toggle
     var addImageClasses = function( $images ) {
         $images.each(function(i){
             var width = $(this).width(),
@@ -61,7 +63,7 @@ define('layoutrr', ['jquery'], function ($) {
             var width = $(this).width(),
                 height = $(this).height();
 
-            $(this).addClass( 'face-'+getRandom( 1, CaptionLayouts ) );
+            $(this).addClass( 'face-'+getRandom( 1, FaceLayouts ) );
         });
     };
 
@@ -80,7 +82,6 @@ define('layoutrr', ['jquery'], function ($) {
         removeImageClasses( $images );
         removeFaceClasses( $faces );
     };
-
 
     // Generate and add the new classes
     var generateClasses = function() {

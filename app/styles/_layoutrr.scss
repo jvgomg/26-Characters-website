@@ -2,10 +2,10 @@
 $spaceX: 15.5;
 $spaceY: 28 / 2;
 
-$xShift: -2;
-$yShift: -3;
+//$xShift: -2;
+//$yShift: -3;
 
-$captionCords: (
+$captions: (
     (12, 24),
     (8, 28),
     (12, 26),
@@ -18,18 +18,233 @@ $captionCords: (
     (10, 20)
 );
 
-$captionCordsLength: length($captionCords);
+$landscapeImages: (
+    ( 0, 0, 20 ),
+    ( 0, 0, 22 ),
+    ( 0, 0, 24 ),
+    ( 0, 2, 20 ),
+    ( 0, 2, 22 ),
+    ( 0, 2, 24 ),
+    ( 0, 4, 20 ),
+    ( 0, 4, 22 ),
+    ( 0, 4, 24 ),
+    ( 0, 6, 20 ),
+    ( 0, 6, 22 ),
+    ( 0, 6, 24 ),
+    ( 0, 8, 20 ),
+    ( 0, 8, 22 ),
+    ( 0, 8, 24 ),
 
-@for $i from 1 through $captionCordsLength {
+    ( 2, 0, 20 ),
+    ( 2, 0, 22 ),
+    ( 2, 0, 24 ),
+    ( 2, 2, 20 ),
+    ( 2, 2, 22 ),
+    ( 2, 2, 24 ),
+    ( 2, 4, 20 ),
+    ( 2, 4, 22 ),
+    ( 2, 4, 24 ),
+    ( 2, 6, 20 ),
+    ( 2, 6, 22 ),
+    ( 2, 6, 24 ),
+    ( 2, 8, 20 ),
+    ( 2, 8, 22 ),
+    ( 2, 8, 24 ),
 
-    $xy: nth( $captionCords, $i );
+    ( 4, 0, 20 ),
+    ( 4, 0, 22 ),
+    ( 4, 0, 24 ),
+    ( 4, 2, 20 ),
+    ( 4, 2, 22 ),
+    ( 4, 2, 24 ),
+    ( 4, 4, 20 ),
+    ( 4, 4, 22 ),
+    ( 4, 4, 24 ),
+    ( 4, 6, 20 ),
+    ( 4, 6, 22 ),
+    ( 4, 6, 24 ),
+    ( 4, 8, 20 ),
+    ( 4, 8, 22 ),
+    ( 4, 8, 24 ),
+
+    ( 6, 0, 20 ),
+    ( 6, 0, 22 ),
+    ( 6, 0, 24 ),
+    ( 6, 2, 20 ),
+    ( 6, 2, 22 ),
+    ( 6, 2, 24 ),
+    ( 6, 4, 20 ),
+    ( 6, 4, 22 ),
+    ( 6, 4, 24 ),
+    ( 6, 6, 20 ),
+    ( 6, 6, 22 ),
+    ( 6, 6, 24 ),
+    ( 6, 8, 20 ),
+    ( 6, 8, 22 ),
+    ( 6, 8, 24 ),
+
+    ( 8, 0, 20 ),
+    ( 8, 0, 22 ),
+    ( 8, 0, 24 ),
+    ( 8, 2, 20 ),
+    ( 8, 2, 22 ),
+    ( 8, 2, 24 ),
+    ( 8, 4, 20 ),
+    ( 8, 4, 22 ),
+    ( 8, 4, 24 ),
+    ( 8, 6, 20 ),
+    ( 8, 6, 22 ),
+    ( 8, 6, 24 ),
+    ( 8, 8, 20 ),
+    ( 8, 8, 22 ),
+    ( 8, 8, 24 )
+);
+
+$portraitImages: (
+    ( 0, 0, 20 ),
+    ( 0, 0, 22 ),
+    ( 0, 0, 24 ),
+    ( 0, 2, 20 ),
+    ( 0, 2, 22 ),
+    ( 0, 2, 24 ),
+    ( 0, 4, 20 ),
+    ( 0, 4, 22 ),
+    ( 0, 4, 24 ),
+    ( 0, 6, 20 ),
+    ( 0, 6, 22 ),
+    ( 0, 6, 24 ),
+    ( 0, 8, 20 ),
+    ( 0, 8, 22 ),
+    ( 0, 8, 24 ),
+
+    ( 2, 0, 20 ),
+    ( 2, 0, 22 ),
+    ( 2, 0, 24 ),
+    ( 2, 2, 20 ),
+    ( 2, 2, 22 ),
+    ( 2, 2, 24 ),
+    ( 2, 4, 20 ),
+    ( 2, 4, 22 ),
+    ( 2, 4, 24 ),
+    ( 2, 6, 20 ),
+    ( 2, 6, 22 ),
+    ( 2, 6, 24 ),
+    ( 2, 8, 20 ),
+    ( 2, 8, 22 ),
+    ( 2, 8, 24 ),
+
+    ( 4, 0, 20 ),
+    ( 4, 0, 22 ),
+    ( 4, 0, 24 ),
+    ( 4, 2, 20 ),
+    ( 4, 2, 22 ),
+    ( 4, 2, 24 ),
+    ( 4, 4, 20 ),
+    ( 4, 4, 22 ),
+    ( 4, 4, 24 ),
+    ( 4, 6, 20 ),
+    ( 4, 6, 22 ),
+    ( 4, 6, 24 ),
+    ( 4, 8, 20 ),
+    ( 4, 8, 22 ),
+    ( 4, 8, 24 ),
+
+    ( 6, 0, 20 ),
+    ( 6, 0, 22 ),
+    ( 6, 0, 24 ),
+    ( 6, 2, 20 ),
+    ( 6, 2, 22 ),
+    ( 6, 2, 24 ),
+    ( 6, 4, 20 ),
+    ( 6, 4, 22 ),
+    ( 6, 4, 24 ),
+    ( 6, 6, 20 ),
+    ( 6, 6, 22 ),
+    ( 6, 6, 24 ),
+    ( 6, 8, 20 ),
+    ( 6, 8, 22 ),
+    ( 6, 8, 24 ),
+
+    ( 8, 0, 20 ),
+    ( 8, 0, 22 ),
+    ( 8, 0, 24 ),
+    ( 8, 2, 20 ),
+    ( 8, 2, 22 ),
+    ( 8, 2, 24 ),
+    ( 8, 4, 20 ),
+    ( 8, 4, 22 ),
+    ( 8, 4, 24 ),
+    ( 8, 6, 20 ),
+    ( 8, 6, 22 ),
+    ( 8, 6, 24 ),
+    ( 8, 8, 20 ),
+    ( 8, 8, 22 ),
+    ( 8, 8, 24 )
+);
+
+
+
+
+$captionsLength: length($captions);
+$landscapeImagesLength: length($landscapeImages);
+$portraitImagesLength: length($portraitImages);
+
+
+@for $i from 1 through $captionsLength {
+
+    $xy: nth( $captions, $i );
     $x: nth( $xy, 1 );
     $y: nth( $xy, 2 );
 
     .caption-#{$i} {
-        @include rLeft( $spaceX *  ( $xShift + $x ) );
-        @include rTop( $spaceY *  ( $yShift +$y ) );
+        @include rLeft( $spaceX *  ( $x ) );
+        @include rTop( $spaceY *  ( $y ) );
     }
 }
+
+
+// Use Landscape data for faces (for now)
+@for $i from 1 through $landscapeImagesLength {
+
+    $xy: nth( $landscapeImages, $i );
+    $x: nth( $xy, 1 );
+    $y: nth( $xy, 2 );
+
+    .face-#{$i} {
+        @include rLeft( $spaceX *  ( $x ) );
+        @include rTop( $spaceY *  ( $y ) );
+    }
+}
+
+
+@for $i from 1 through $landscapeImagesLength {
+
+    $xyw: nth( $landscapeImages, $i );
+    $x: nth( $xyw, 1 );
+    $y: nth( $xyw, 2 );
+    $w: nth( $xyw, 3 );
+
+    .landscape-#{$i} {
+        @include rLeft( $spaceX *  ( $x ) );
+        @include rTop( $spaceY *  ( $y ) );
+        @include rWidth( $spaceX *  $w );
+    }
+}
+
+
+@for $i from 1 through $portraitImagesLength {
+
+    $xyw: nth( $portraitImages, $i );
+    $x: nth( $xyw, 1 );
+    $y: nth( $xyw, 2 );
+    $w: nth( $xyw, 3 );
+
+    .portrait-#{$i} {
+        @include rLeft( $spaceX *  ( $x ) );
+        @include rTop( $spaceY *  ( $y ) );
+        @include rWidth( $spaceX *  ( $w - 10 ) );
+    }
+}
+
 
 
