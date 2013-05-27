@@ -182,12 +182,72 @@ $portraitImages: (
     ( 8, 8, 24 )
 );
 
+$figures: (
+    ( 0, 0 ),
+    ( 0, 2 ),
+    ( 0, 4 ),
+    ( 0, 8 ),
 
+    ( 2, 0 ),
+    ( 2, 2 ),
+    ( 2, 4 ),
+    ( 2, 8 ),
+
+    ( 0, 0 ),
+    ( 0, 2 ),
+    ( 0, 4 ),
+    ( 0, 8 ),
+
+    ( 2, 0 ),
+    ( 2, 2 ),
+    ( 2, 4 ),
+    ( 2, 8 ),
+
+    ( 0, 2 ),
+    ( 0, 4 ),
+    ( 0, 8 ),
+
+    ( 2, 0 ),
+    ( 2, 2 ),
+    ( 2, 4 ),
+    ( 2, 8 ),
+
+    ( 4, 0 ),
+    ( 4, 2 ),
+    ( 4, 4 ),
+    ( 4, 8 ),
+
+    ( 4, 0 ),
+    ( 4, 2 ),
+    ( 4, 4 ),
+    ( 4, 8 ),
+
+    ( 6, 0 ),
+    ( 6, 2 ),
+    ( 6, 4 ),
+    ( 6, 8 ),
+
+    ( 8, 0 ),
+    ( 8, 2 ),
+    ( 8, 4 ),
+    ( 8, 8 ),
+
+    ( 10, 0 ),
+    ( 10, 2 ),
+    ( 10, 4 ),
+    ( 10, 8 ),
+
+    ( 12, 0 ),
+    ( 12, 2 ),
+    ( 12, 4 ),
+    ( 12, 8 )
+);
 
 
 $captionsLength: length($captions);
 $landscapeImagesLength: length($landscapeImages);
 $portraitImagesLength: length($portraitImages);
+$figuresLength: length($figures);
 
 
 @for $i from 1 through $captionsLength {
@@ -243,6 +303,18 @@ $portraitImagesLength: length($portraitImages);
         @include rLeft( $spaceX *  ( $x ) );
         @include rTop( $spaceY *  ( $y ) );
         @include rWidth( $spaceX *  ( $w - 10 ) );
+    }
+}
+
+@for $i from 1 through $figuresLength {
+
+    $xy: nth( $figures, $i );
+    $x: nth( $xy, 1 );
+    $y: nth( $xy, 2 );
+
+    .figure-#{$i} {
+        @include rPaddingLeft( $spaceX *  ( $x ) );
+        @include rPaddingTop( $spaceY *  ( $y ) );
     }
 }
 

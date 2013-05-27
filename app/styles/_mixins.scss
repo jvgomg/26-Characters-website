@@ -52,6 +52,30 @@
     }
 }
 
+@mixin rPaddingTop($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        padding-top: $value*1px;
+        padding-top: $processingRem+rem;
+    }
+    @else {
+        padding-top: $processingRem+rem;
+    }
+}
+
+@mixin rPaddingLeft($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        padding-left: $value*1px;
+        padding-left: $processingRem+rem;
+    }
+    @else {
+        padding-left: $processingRem+rem;
+    }
+}
+
 @mixin rMarginLeft($value) {
   $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
 

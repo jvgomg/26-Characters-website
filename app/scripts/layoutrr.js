@@ -8,12 +8,14 @@ define('layoutrr', ['jquery'], function ($) {
     var $family,
         $captions,
         $images,
-        $faces;
+        $faces,
+        $figures;
 
     var CaptionLayouts = 10,
         ImageLayoutsLandscape = 75,
         ImageLayoutsPortrait = 75,
-        FaceLayouts = 75;
+        FaceLayouts = 75,
+        FigureLayouts = 48;
 
 
     var getRandom = function (min, max) {
@@ -74,6 +76,19 @@ define('layoutrr', ['jquery'], function ($) {
     };
 
 
+    // Figure class toggle
+    var addFigureClasses = function( $figures ) {
+        $figures.each(function(i){
+            $(this).addClass( 'figure-' + getRandom( 1, FigureLayouts ) );
+        });
+    };
+
+    var removeFigureClasses = function( $figures ) {
+        $figures.each(function(i){
+            $(this).removeClass();
+        });
+    };
+
     // Remove all classes
     var dropClasses = function() {
         console.log('Layoutrr Dropping classes');
@@ -81,6 +96,7 @@ define('layoutrr', ['jquery'], function ($) {
         removeCaptionClasses( $captions );
         removeImageClasses( $images );
         removeFaceClasses( $faces );
+        removeFigureClasses( $figures );
     };
 
     // Generate and add the new classes
@@ -90,6 +106,7 @@ define('layoutrr', ['jquery'], function ($) {
         addCaptionClasses( $captions );
         addImageClasses( $images );
         addFaceClasses( $faces );
+        addFigureClasses( $figures );
     };
 
 
@@ -110,6 +127,7 @@ define('layoutrr', ['jquery'], function ($) {
         $captions = $family.find('figcaption');
         $images = $family.find('.portfolio img');
         $faces = $family.find('.face');
+        $figures = $family.find('>li');
 
         generateClasses();
 
