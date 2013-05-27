@@ -11,6 +11,9 @@ define('flickrr', ['jquery'], function ($) {
     var speed = 500;
 
 
+    var mouseEnter,
+        mouseLeave;
+
     var profileInit = function( profile ) {
 
         var $images = $(profile).find('img'),
@@ -46,23 +49,24 @@ define('flickrr', ['jquery'], function ($) {
             flickInterval = setInterval(flick, speed);
         }
 
-        // Mouse enter
-        $(profile).on('mouseenter', 'img', function(e){
-
+        mouseEnter = function(){
             flickDie = false;
 
             if ( !flickStarted ) {
                 startFlick();
             }
+        };
 
-        });
+        mouseLeave = function(e){
+            flickDie = true;
+        };
+
+
+        // Mouse enter
+        $(profile).on('mouseenter', 'img', mouseEnter);
 
         // Mouse leave
-        $(profile).on('mouseleave', 'img', function(e){
-
-            flickDie = true;
-
-        });
+        $(profile).on('mouseleave', 'img', mouseLeave);
 
     };
 
@@ -70,6 +74,23 @@ define('flickrr', ['jquery'], function ($) {
     /*
         Public
      */
+    var destroy = function() {
+        console.log('Flickrr Destroy');
+
+        console.warn('Flickrr Destroy not working');
+        $profiles.find('img').each(function(i){
+            console.log(this);
+            console.log( $(this) );
+            var off = $(this).off('mouseenter', 'img');
+            console.log(this);
+            console.log( $(this) );
+
+
+            // TODO. unbind events..
+            $(this).unbind();
+        });
+    };
+
     var setup = function( family ) {
         console.log('Setting up Flickrr');
 
@@ -80,11 +101,9 @@ define('flickrr', ['jquery'], function ($) {
         $(function() {
 
             // Scope to each of the profiles
-            $profiles.each(function(i, that){
-
+            $profiles.each(function(i){
                 // Setup profiles
                 profileInit(this);
-
             });
 
         });
@@ -94,6 +113,7 @@ define('flickrr', ['jquery'], function ($) {
 
 
     return {
-        setup: setup
+        setup: setup,
+        destroy: destroy
     };
 });
