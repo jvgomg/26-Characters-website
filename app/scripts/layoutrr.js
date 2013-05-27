@@ -80,6 +80,11 @@ define('layoutrr', ['jquery'], function ($) {
     var addFigureClasses = function( $figures ) {
         $figures.each(function(i){
             $(this).addClass( 'figure-' + getRandom( 1, FigureLayouts ) );
+
+            if ( getRandom( 1, 3 ) === 3 ) {
+                $(this).addClass('clearLeft');
+            }
+
         });
     };
 

@@ -155,10 +155,10 @@ img {
     Effects
  */
 .js body {
-    opacity: 0;
+    //opacity: 0;
 }
 .js body.fadeIn {
-    @include animate(fadeIn, 0.75s, 0s);
+    //@include animate(fadeIn, 0.75s, 0s);
 }
 
 
@@ -235,6 +235,10 @@ $rwidth: 1575;
 
         position: relative;
         float: left;
+
+        &.clearLeft {
+            clear: left;
+        }
     }
 }
 
