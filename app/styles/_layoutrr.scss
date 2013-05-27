@@ -288,7 +288,7 @@ $figuresLength: length($figures);
     .landscape-#{$i} {
         @include rLeft( $spaceX *  ( $x ) );
         @include rTop( $spaceY *  ( $y ) );
-        @include rWidth( $spaceX *  $w );
+        @include rWidth( $spaceX * ( $w ) );
     }
 }
 
@@ -303,7 +303,7 @@ $figuresLength: length($figures);
     .portrait-#{$i} {
         @include rLeft( $spaceX *  ( $x ) );
         @include rTop( $spaceY *  ( $y ) );
-        @include rWidth( $spaceX *  ( $w - 10 ) );
+        @include rWidth( $spaceX *  ( $w - 12 ) );
     }
 }
 

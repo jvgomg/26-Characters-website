@@ -5,6 +5,8 @@
 $fontsize-base: 16;
 $remuxFallback: true;
 
+$rwidth: 1575;
+
 @import "_mixins.scss";
 @import "_animate.sass";
 @import "_letters.scss";
@@ -207,8 +209,6 @@ img {
     }
 }
 
-$rwidth: 1575;
-
 #bar {
     @include rWidth($rwidth);
     height: 20px;
@@ -226,6 +226,8 @@ $rwidth: 1575;
 #family {
     @include rMarginTop(28 * 6);
 
+    @include rWidth( $rwidth );
+
     //@include rMarginLeft( ( 84 / 2 ) - 5 );
     //@include rMarginRight( ( 84 / 2 ) - 5 );
 
@@ -233,7 +235,6 @@ $rwidth: 1575;
         @include rWidth( $rwidth / 16 * 5  );
         @include rMinHeight( 512 );
 
-        position: relative;
         float: left;
 
         &.clearLeft {
