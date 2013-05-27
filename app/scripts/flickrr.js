@@ -5,8 +5,8 @@ define('flickrr', ['jquery'], function ($) {
     /*
         Private
      */
-    var $family = $('#family'),
-        $profiles = $family.children('li').children('figure');
+    var $family,
+        $profiles;
 
     var speed = 500;
 
@@ -70,8 +70,11 @@ define('flickrr', ['jquery'], function ($) {
     /*
         Public
      */
-    var setup = function() {
+    var setup = function( family ) {
         console.log('Setting up Flickrr');
+
+        $family = $(family);
+        $profiles = $family.find('figure');
 
         // DOM Ready
         $(function() {

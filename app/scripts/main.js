@@ -5,16 +5,23 @@ require.config({
         jquery: '../components/jquery/jquery'
     },
     shim: {
+        'jquery.shuffle': {
+            deps: ['jquery'],
+            exports: '$'
+        }
     }
 });
 
 
-require(['jquery', 'flickrr', 'layoutrr'], function ($, flickrr, layoutrr) {
+require(['jquery', 'flickrr', 'layoutrr', 'jquery.shuffle'], function ($, flickrr, layoutrr) {
     'use strict';
     // use app here
 
     var $family = $('#family'),
         $body = $('body');
+
+    // Shuffle the family
+    $family.children().shuffle();
 
     $(function() {
         // JS is enabled... page is hidden
@@ -24,13 +31,14 @@ require(['jquery', 'flickrr', 'layoutrr'], function ($, flickrr, layoutrr) {
             $newAwardType = $('<h2 class="award-type">').insertAfter($award),
             $awardType = $award.find('abbr').appendTo($newAwardType);
 
+        // Trim whitespace
         $award.html( $award.html().trim() );
 
         // Add layout classes
         layoutrr.setup( $family );
 
         // Flick through effect
-        flickrr.setup();
+        flickrr.setup( $family );
 
         // Fade page in
         var $body = $('body').removeClass('fadedOut').addClass('fadeIn');
