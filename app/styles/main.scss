@@ -329,8 +329,6 @@ figure {
 
 
 
-
-
 /*
     Breakpoints
 */
@@ -339,7 +337,7 @@ figure {
 @media only screen and (max-width: 1040px) {
 
     .js body.fadeIn {
-        @include animate(fadeOut, 0.75s, 0s);
+        //@include animate(fadeOut, 0.75s, 0s);
     }
 
 }
