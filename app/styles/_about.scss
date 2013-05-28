@@ -3,13 +3,13 @@
  */
 
 header, section, aside {
-    margin: 0 #{$acol/2}vw;
+    margin: 0 2vw;
 }
 #header {
-    margin-top: #{$acol/2}vw;
+    margin-top: 2vw;
 }
 #about {
-    margin-bottom: #{$acol/2}vw;
+    margin-bottom: 2vw;
 
     section, aside {
         margin-left: 11vw;
@@ -215,12 +215,12 @@ header, section, aside {
     }
 
     header, section, aside {
-        padding: 0 #{$acol/2.5}vw 0;
+        padding: 0 2.25vw 0;
         margin: 0;
     }
 
     #header {
-        padding-top: 3vw;
+        padding-top: 1px;
         margin-top: 0;
 
         h1 {
@@ -428,14 +428,108 @@ header, section, aside {
 // Tablet
 @media screen and (min-width: 1200px) {
 
-    #awards {
-        padding: 2vw #{$acol/2}vw 0;
-        margin: 2vw #{$acol/2}vw 0;
+    nav, #share {
+        display: none;
+    }
 
+    #inner {
+        margin: 2.5vw;
+        min-height: 140vw;
+    }
+
+    #about-header {
+        h2, .huge {
+            width: 110%;
+        }
+
+        span {
+        }
+
+        .date-1,
+        .date-2 {
+            .extra {
+                display: none;
+            }
+        }
+        .date-1 {
+            @include spaces(16);
+        }
+        .date-2 {
+            @include spaces(15);
+        }
+        .month{
+            @include spaces(13);
+            margin-bottom: 8vw;
+        }
+
+        .venue {
+            @include spaces(8);
+        }
+        .city {
+            @include spaces(8);
+            margin-bottom: 8vw;
+        }
+
+    }
+
+    #awards {
+        top: 6*2vw;
+        left: 10.25vw;
+        width: 60vw;
 
         .group {
             width: 33.333%;
+
+            &:last-child {
+                h4 {
+                    margin-top: 0;
+                }
+            }
         }
+    }
+
+    #location {
+        top: 35*2vw;
+        left: 100/20*14vw;
+    }
+
+    #staff {
+        top: 45*2vw;
+        width: 100/20*9.8vw;
+    }
+
+    #logos {
+        top: 47*2vw;
+        left: 100/20*1.8vw;
+        width: 100/20*4vw;
+        overflow: visible;
+
+        .rave {
+            width: 100/20*2vw;
+        }
+        .show {
+            width: 100/20*1.5vw;
+            left: 2vw;
+        }
+    }
+
+    #contact {
+        top: 23*2vw;
+        //left: 100/20*7.1vw;
+        left: 100/20*9.8vw;
+
+        h3 {
+            display: none;
+        }
+
+        a, p {
+            float: left;
+        }
+        .email {
+            margin-left: 100/20*1.25vw;
+        }
+
+
     }
 
 }
