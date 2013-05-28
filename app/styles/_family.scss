@@ -46,6 +46,11 @@
 
             }
             .portfolio {
+                li {
+                   width: 100/20*6vw;
+                   height: 100/20*4.5vw;
+                }
+
                 img {
                     max-width: 100/20*6vw;
                     max-height: 100/20*4.5vw;
@@ -83,6 +88,12 @@
 
     #family {
         margin-top: 5 * 8vw;
+
+        figure {
+            .face {
+                width: 100/20*2vw;
+            }
+        }
     }
 
 
