@@ -57,12 +57,8 @@
     .month {
         @include spaces(1);
     }
-
-
 }
 
-#cover {
-}
     #contact {
         margin-top: 9vw;
     }
@@ -126,26 +122,20 @@
 
 @media screen and (min-width: 680px) {
 
-    header, section {
-        padding: 0 #{$acol/2}vw 0;
-        margin: 0;
-    }
-    #header {
-        padding-top: 3vw;
-        margin-top: 0;
-    }
-
     #cover {
         position: static;
         top:0;
         right:0;
         bottom:0;
         left:0;
+        overflow-x: hidden;
         background-image: url(../images/ptn.png);
     }
     #inner {
-        margin: 3vw #{$acol/2}vw 0;
+        margin: #{$acol/2}vw;
         background-color: $bg;
+
+        min-height: 150vw;
     }
     .on-about {
         #cover {
@@ -154,30 +144,141 @@
         }
     }
 
+    header, section {
+        padding: 0 #{$acol/2.5}vw 0;
+        margin: 0;
+    }
+    #header {
+        padding-top: 3vw;
+        margin-top: 0;
+    }
+
+    #about {
+        position: relative;
+    }
+
+    #header {
+        h1 {
+            @include spaces(2);
+        }
+    }
+
+    #about-header {
+        position: absolute;
+        top: 0;
+
+        h2 {
+            //margin-top: 6vw;
+        }
+
+        .degree,
+        .month,
+        .city {
+            margin-bottom: 6vw;
+        }
+
+        .at {
+            @include spaces(27);
+        }
+        .dash {
+            display: block;
+            float: left;
+            clear: left;
+        }
+        .degree {
+            @include spaces(1);
+            clear: none;
+        }
+
+        .date-1 {
+            @include spaces(17);
+        }
+        .date-2 {
+            @include spaces(17);
+            //margin-top:  1 * 6vw;
+        }
+        .month {
+            @include spaces(20);
+            margin-top:  1 * 6vw;
+            margin-bottom:  2 * 6vw;
+        }
+
+
+        .venue {
+            @include spaces(17);
+        }
+        .city {
+            @include spaces(23);
+            margin-bottom:  4 * 6vw;
+        }
+
+
+        .register-link {
+            @include spaces(2);
+        }
+        .tickets {
+            display: block;
+            clear: left;
+            @include spaces(2);
+        }
+
+
+    }
+
     #about {
         padding-bottom: 3vw;
         margin-bottom: 3vw;
     }
 
-        #contact {
-            margin-top: 3vw;
+        #awards,
+        #location,
+        #contact,
+        #logos,
+        #staff{
+            padding: 0;
+            margin: 0;
+            position: absolute;
         }
 
         #awards {
-            padding: 3vw #{$acol/2}vw 0;
-            margin: 3vw #{$acol/2}vw 0;
+            border: none;
 
-            overflow: hidden;
+            top: 6*3vw;
+            left: 8vw;
+            width: 60vw;
 
             .group {
-                width: 50%;
+                width: 28vw;
                 float: left;
-                padding-right: 5vw;
+                padding-right: 0;
+
+                &:last-child {
+                    h4 {
+                        margin-top: 3vw;
+                    }
+                }
+            }
+        }
+
+        #location {
+
+            top: 23 * 3vw;
+            left: 96/20*15.5vw;
+
+            h3 {
+                display: none;
+            }
+            p {
+                margin-bottom: 0;
             }
         }
 
         #logos {
-            width: 50%;
+            width: 40vw;
+
+            top: 25 * 3vw;
+            left: 96/20*12.5vw;
+
 
             .show {
                 top: 2vw;
@@ -185,6 +286,27 @@
             }
 
         }
+
+        #contact {
+            top: 36 * 3vw;
+            left: 96/20*1.8vw;
+        }
+
+        #staff {
+            top: 33 * 3vw;
+            left: 96/20*9.5vw;
+            width: 96/20*9vw;
+
+            .group {
+                width: 50%;
+                float: left;
+            }
+        }
+
+    #share {
+        display: block;
+    }
+
 
 }
 
