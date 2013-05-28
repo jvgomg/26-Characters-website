@@ -62,12 +62,27 @@ var Flickrr = function(){
         };
 
 
-        // Mouse enter
-        $(profile).on('mouseenter', 'img', mouseEnter);
+        if ( ! Modernizr.touch) {
+            // Mouse driven
 
-        // Mouse leave
-        $(profile).on('mouseleave', 'img', mouseLeave);
+            // Mouse enter
+            $(profile).on('mouseenter', 'img', mouseEnter);
 
+            // Mouse leave
+            $(profile).on('mouseleave', 'img', mouseLeave);
+
+        } else {
+            // Tap Driven
+
+            $(profile).on('touchend', 'img', function(){
+
+                // Flick through
+                flick()
+            });
+
+            // Disable double tapp to zoom
+            $('body').nodoubletapzoom();
+        }
     };
 
 
@@ -84,7 +99,6 @@ var Flickrr = function(){
             var off = $(this).off('mouseenter', 'img');
             console.log(this);
             console.log( $(this) );
-
 
             // TODO. unbind events..
             $(this).unbind();
