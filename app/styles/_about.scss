@@ -247,7 +247,11 @@ header, section, aside {
         overflow: hidden;
 
         h1 {
-            margin: 6vw 0;
+            margin: 6vw 0 0 0;
+
+            .on-about & {
+                margin: 6vw 0;
+            }
         }
     }
 

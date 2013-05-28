@@ -22,100 +22,58 @@ var Layoutrr = function(){
         return min + Math.floor(Math.random() * (max - min + 1));
     };
 
-    // Caption class toggle
-    var addCaptionClasses = function( $captions ) {
-
-        $captions.each(function(i){
-            $(this).addClass( 'caption-'+getRandom( 1, CaptionLayouts ) );
-        });
-    };
-
-    var removeCaptionClasses = function( $captions ) {
-        $captions.each(function(i){
-            $(this).removeClass();
-        });
-    };
-
-
     // Image class toggle
-    var addImageClasses = function( $images ) {
+    var addImageLumps = function() {
         $images.each(function(i){
             var width = $(this).width(),
-                height = $(this).height();
+                height = $(this).height(),
+
+                flow = getRandom(0,1),
+
+                left = getRandom(0,3),
+                right = getRandom(0,3),
+                top = getRandom(0,3),
+                bottom = getRandom(0,2);
 
             if ( width > height ) {
-                $(this).addClass( 'landscape-'+getRandom( 1, ImageLayoutsLandscape ) );
+                if ( ! flow ){
+                    // More Left
+                    $(this).css( 'padding-top', top * 2.5 +'vw' );
+                    $(this).css( 'padding-right', (right-1) * 2.5 +'vw' );
+                    $(this).css( 'padding-bottom', bottom * 2.5 +'vw' );
+                    $(this).css( 'padding-left', left * 2.5 +'vw' );
+                }
+                else {
+                    // More right
+                    $(this).css( 'padding-top', top * 2.5 +'vw' );
+                    $(this).css( 'padding-right', right * 2.5 +'vw' );
+                    $(this).css( 'padding-bottom', bottom * 2.5 +'vw' );
+                    $(this).css( 'padding-left', (left-1) * 2.5 +'vw' );
+                }
             }
             else {
-                $(this).addClass( 'portrait-'+getRandom( 1, ImageLayoutsPortrait ) );
+                console.log('Port');
+                if ( ! flow ){
+                    // More Left
+                    $(this).css( 'padding-top', top * 2.5 +'vw' );
+                    $(this).css( 'padding-right', (right-1) * 2.5 +'vw' );
+                    $(this).css( 'padding-bottom', bottom * 2.5 +'vw' );
+                    $(this).css( 'padding-left', left * 2.5 +'vw' );
+                }
+                else {
+                    // More right
+                    $(this).css( 'padding-top', top * 2.5 +'vw' );
+                    $(this).css( 'padding-right', right * 2.5 +'vw' );
+                    $(this).css( 'padding-bottom', bottom * 2.5 +'vw' );
+                    $(this).css( 'padding-left', (left-1) * 2.5 +'vw' );
+                }
+
             }
         });
     };
 
-    var removeImageClasses = function( $images ) {
-        $images.each(function(i){
-            $(this).removeClass();
-        });
-    };
 
-
-    // Face class toggle
-    var addFaceClasses = function( $faces ) {
-        $faces.each(function(i){
-            var width = $(this).width(),
-                height = $(this).height();
-
-            $(this).addClass( 'face-'+getRandom( 1, FaceLayouts ) );
-        });
-    };
-
-    var removeFaceClasses = function( $faces ) {
-        $faces.each(function(i){
-            $(this).removeClass().addClass('face');
-        });
-    };
-
-
-    // Figure class toggle
-    var addFigureClasses = function( $figures ) {
-        $figures.each(function(i){
-            $(this).addClass( 'figure-' + getRandom( 1, FigureLayouts ) );
-
-            if ( getRandom( 1, 3 ) === 3 ) {
-                $(this).addClass('clearLeft');
-            }
-
-        });
-    };
-
-    var removeFigureClasses = function( $figures ) {
-        $figures.each(function(i){
-            $(this).removeClass();
-        });
-    };
-
-    // Remove all classes
-    var dropClasses = function() {
-        console.log('Layoutrr Dropping classes');
-
-        removeCaptionClasses( $captions );
-        removeImageClasses( $images );
-        removeFaceClasses( $faces );
-        removeFigureClasses( $figures );
-    };
-
-    // Generate and add the new classes
-    var generateClasses = function() {
-        console.log('Layoutrr Generating classes');
-
-        addCaptionClasses( $captions );
-        addImageClasses( $images );
-        addFaceClasses( $faces );
-        addFigureClasses( $figures );
-    };
-
-
-    var applyLumps = function() {
+    var addFigureLumps = function() {
 
         $figures.each(function(){
 
@@ -128,8 +86,7 @@ var Layoutrr = function(){
             $(this).css( 'margin-top', top*2.5 +'vw' );
 
         });
-
-    }
+    };
 
 
     /*
@@ -137,13 +94,10 @@ var Layoutrr = function(){
      */
     var refresh = function() {
         console.log('Layoutrr Refresh');
-        dropClasses();
-        generateClasses();
     };
 
     var destroy = function() {
         console.log('Layoutrr Destroy');
-        dropClasses();
     };
 
     var setup = function( family ) {
@@ -151,15 +105,14 @@ var Layoutrr = function(){
 
         // Cache elements
         $family = $(family);
-        $captions = $family.find('figcaption');
+        //$captions = $family.find('figcaption');
         $images = $family.find('.portfolio img');
-        $faces = $family.find('.face');
+        //$faces = $family.find('.face');
         $figures = $family.find('figure');
 
-        //generateClasses();
-
         // Apply lumps to figures
-        applyLumps();
+        addFigureLumps();
+        addImageLumps();
 
         console.log('Layout Setup complete');
     };
