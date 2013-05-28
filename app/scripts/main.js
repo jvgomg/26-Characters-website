@@ -39,10 +39,10 @@
             Set up packery
          */
         $family.packery({
-            itemSelector: 'figure',
-            //isInitLayout: true,
-            gutter: 10
-        });
+            itemSelector: 'figure'
+        })
+        $family.addClass('on');
+
 
         /*
             Open links in new tab

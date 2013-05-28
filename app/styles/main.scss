@@ -158,11 +158,13 @@ img {
 /*
     Effects
  */
-.js body {
-    //opacity: 0;
-}
-.js body.fadeIn {
-    //@include animate(fadeIn, 0.75s, 0s);
+
+.js #family {
+    opacity: 0;
+
+    &.on {
+        opacity: 1;
+    }
 }
 
 .on-about .family-page {
