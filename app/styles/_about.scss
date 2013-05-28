@@ -5,8 +5,8 @@
 // Base
 #about {
 
-
-    #awards {
+}
+    #contact {
         margin-top: 9vw;
     }
 
@@ -19,12 +19,43 @@
     }
 
     #staff {
-       h4,
-       li {
+        clear: both;
+
+        h4,
+        li {
             margin-bottom: 0;
         }
     }
-}
+
+    #logos {
+        overflow: hidden;
+
+        a {
+            float: left;
+        }
+        img {
+            height: auto;
+            width: 100%;
+        }
+        .rave {
+            width: 30vw;
+        }
+        .show {
+            position: relative;
+            top: 6vw;
+            left: 2vw;
+            width: 24vw;
+        }
+    }
+
+    #awards {
+        border: 1px solid $accent;
+        padding: 0 #{$acol/2}vw;
+        margin: 9vw #{$acol/2}vw 0;
+    }
+
+//}
+
 
 .on-about {
     #header {

@@ -79,8 +79,8 @@ p, address, li, h3, h4, h5 {
     margin-bottom: 9vw;
 }
 
-#header,  #about {
-    margin: 0 #{$acol}vw;
+header, section {
+    padding: 0 #{$acol}vw;
 }
 #header {
     margin-top: #{$acol}vw;
