@@ -6,7 +6,11 @@ header, section, aside {
     margin: 0 2vw;
 }
 #header {
-    margin-top: 2vw;
+    nav {
+        .on-about & {
+            top: 0;
+        }
+    }
 }
 #about {
     margin-bottom: 2vw;
@@ -184,7 +188,7 @@ header, section, aside {
 @media screen and (min-width: 680px) and (-webkit-min-device-pixel-ratio: 2),
        screen and (min-width: 680px) and (max-moz-device-pixel-ratio: 2) {
 
-        #cover {
+        .on-about #cover {
             background-image: url(../images/ptn-x2.png) !important;
             background-size: 5px auto;
         }
@@ -199,18 +203,24 @@ header, section, aside {
         bottom:0;
         left:0;
         overflow-x: hidden;
-        background-image: url(../images/ptn.png);
     }
     #inner {
         margin: #{$acol/2}vw;
         background-color: $bg;
 
+        overflow: hidden;
+
         min-height: 152vw;
     }
     .on-about {
+        #header {
+            padding-top: 0;
+        }
+
         #cover {
             position: fixed;
             overflow-y: scroll;
+            background-image: url(../images/ptn.png);
         }
     }
 
@@ -220,8 +230,9 @@ header, section, aside {
     }
 
     #header {
-        padding-top: 1px;
+        //padding-top: 1px;
         margin-top: 0;
+        padding-top: 2.4vw;
 
         h1 {
             margin: 6vw 0;
@@ -381,7 +392,25 @@ header, section, aside {
 
 
     #header nav {
-        top: 3vw;
+        top: 5vw;
+        right: auto;
+        left: 100/20*16vw;
+
+        .on-about & {
+            top: -3.3vw;
+
+            a {
+                background-image: url(../images/cross.png);
+            }
+
+        }
+
+        a {
+            background-image: url(../images/arrow.png);
+            background-repeat: no-repeat;
+            background-position: 8vw center;
+        }
+
 
         p {
             //border: none;
@@ -394,6 +423,8 @@ header, section, aside {
         width: 20vw;
         height: 10vw;
         position: absolute;
+
+        display: none;
 
         h5 {
             display: none;
@@ -421,7 +452,7 @@ header, section, aside {
     #header nav,
     #share {
         a {
-            padding: 1vw 4vw 0.75vw 1vw;
+            padding: 1vw 4.5vw 0.75vw 1vw;
         }
     }
 
@@ -431,13 +462,18 @@ header, section, aside {
 // Desktop
 @media screen and (min-width: 1200px) {
 
-    nav, #share {
+    #share {
         display: none;
     }
 
     #inner {
         margin: 2.5vw;
         min-height: 140vw;
+        position: relatve;
+    }
+
+    #header {
+        padding-top: 2.5vw;
     }
 
     #about-header {
@@ -502,7 +538,7 @@ header, section, aside {
     }
 
     #logos {
-        top: 47*2vw;
+        top: 46.25*2vw;
         left: 100/20*1.8vw;
         width: 100/20*4vw;
         overflow: visible;
@@ -531,8 +567,15 @@ header, section, aside {
         .email {
             margin-left: 100/20*1.25vw;
         }
+    }
 
+    #header nav {
+        top: 5.2vw;
+        left: 82.5vw;
 
+        a {
+            background-position: 6.5vw center;
+        }
     }
 
 }

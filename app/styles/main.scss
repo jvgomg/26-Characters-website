@@ -175,6 +175,8 @@ img {
  */
 #header {
     position: fixed;
+    top: 0;
+    width: 100%;
 
     h1 {
         position: relative;
@@ -187,8 +189,8 @@ img {
 
     nav {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 9vw;
+        right: 3vw;
         z-index: 10001;
 
         a {
@@ -205,7 +207,6 @@ img {
     }
 
     .award {
-        @include rMarginTop(112);
         @include spaces(6);
     }
 
