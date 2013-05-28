@@ -7,10 +7,35 @@
     #header {
         position: static;
     }
+
+    #cover {
+        display: block;
+        position: fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background-image: url(../images/ptn.png);
+
+        overflow-y: scroll;
+    }
 }
 
-#about {
 
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (max-moz-device-pixel-ratio: 2) {
+
+        #cover {
+            background-image: url(../images/ptn-x2.png) !important;
+            background-size: 5px auto;
+        }
+
+
+}
+
+
+#cover {
+    display: none;
 }
     #contact {
         margin-top: 9vw;

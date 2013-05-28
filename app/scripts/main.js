@@ -48,6 +48,8 @@ require(['jquery', 'flickrr', 'layoutrr', 'jquery.shuffle'], function ($, flickr
         $body.click(function() {
             console.log('Body click');
 
+            $body.toggleClass('on-about');
+
             // Refresh all layout classes
             //layoutrr.refresh();
         });

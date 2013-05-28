@@ -216,6 +216,7 @@ img {
     Family
  */
 #family {
+    overflow: hidden;
     @include rMarginTop(28 * 6);
 
     //@include rMarginLeft( ( 84 / 2 ) - 5 );
