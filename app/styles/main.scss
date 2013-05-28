@@ -177,15 +177,7 @@ img {
     position: fixed;
     top: 0;
     width: 100%;
-
-    h1 {
-        position: relative;
-        z-index: 10000;
-    }
-
-    h2 {
-        z-index: -10000;
-    }
+    z-index: 10000;
 
     nav {
         position: absolute;
@@ -245,9 +237,16 @@ img {
     }
 }
 
+#family-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+}
+
 figure {
     position: relative;
-
+    z-index: 1000;
 
     img, figcaption {
         cursor: crosshair;

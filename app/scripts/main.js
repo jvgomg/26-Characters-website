@@ -25,7 +25,7 @@ require(['jquery', 'flickrr', 'layoutrr', 'jquery.shuffle'], function ($, flickr
 
     $(function() {
         // Split award into 2 lines
-        var $award = $('#header .award'),
+        var $award = $('#family-header .award'),
             $newAwardType = $('<h2 class="award-type">').insertAfter($award);
 
             $award.find('abbr').appendTo($newAwardType);
@@ -65,7 +65,7 @@ require(['jquery', 'flickrr', 'layoutrr', 'jquery.shuffle'], function ($, flickr
 
             causeRepaintsOn.each(function(){
                 var z = $(this).css("z-index");
-                $(this).css("z-index", z);
+                //$(this).css("z-index", z);
             });
         });
 
