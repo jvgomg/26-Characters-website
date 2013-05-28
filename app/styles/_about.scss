@@ -7,35 +7,15 @@
     #header {
         position: static;
     }
-
-    #cover {
+    #about {
         display: block;
-        position: fixed;
-        top:0;
-        right:0;
-        bottom:0;
-        left:0;
-        background-image: url(../images/ptn.png);
-
-        overflow-y: scroll;
     }
 }
 
-
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-       screen and (max-moz-device-pixel-ratio: 2) {
-
-        #cover {
-            background-image: url(../images/ptn-x2.png) !important;
-            background-size: 5px auto;
-        }
-
-
-}
-
-
-#cover {
+#about {
     display: none;
+}
+#cover {
 }
     #contact {
         margin-top: 9vw;
@@ -89,33 +69,76 @@
 
 
 // Tablet
+@media screen and (min-width: 680px) and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-width: 680px) and (max-moz-device-pixel-ratio: 2) {
+
+        #cover {
+            background-image: url(../images/ptn-x2.png) !important;
+            background-size: 5px auto;
+        }
+}
+
 @media screen and (min-width: 680px) {
 
-    #contact {
-        margin-top: 3vw;
+    header, section {
+        padding: 0 #{$acol/2}vw 0;
+        margin: 0;
+    }
+    #header {
+        padding-top: 3vw;
+        margin-top: 0;
     }
 
-    #awards {
-        padding: 3vw #{$acol/2}vw 0;
+    #cover {
+        position: static;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background-image: url(../images/ptn.png);
+    }
+    #inner {
         margin: 3vw #{$acol/2}vw 0;
-        overflow: hidden;
+        background-color: $bg;
+    }
+    .on-about {
+        #cover {
+            position: fixed;
+            overflow-y: scroll;
+        }
+    }
 
-        .group {
+    #about {
+        padding-bottom: 3vw;
+        margin-bottom: 3vw;
+    }
+
+        #contact {
+            margin-top: 3vw;
+        }
+
+        #awards {
+            padding: 3vw #{$acol/2}vw 0;
+            margin: 3vw #{$acol/2}vw 0;
+
+            overflow: hidden;
+
+            .group {
+                width: 50%;
+                float: left;
+                padding-right: 5vw;
+            }
+        }
+
+        #logos {
             width: 50%;
-            float: left;
-            padding-right: 5vw;
+
+            .show {
+                top: 2vw;
+                //left: 2vw;
+            }
+
         }
-    }
-
-    #logos {
-        width: 50%;
-
-        .show {
-            top: 2vw;
-            //left: 2vw;
-        }
-
-    }
 
 }
 
@@ -124,6 +147,9 @@
 @media screen and (min-width: 1200px) {
 
     #awards {
+        padding: 2vw #{$acol/2}vw 0;
+        margin: 2vw #{$acol/2}vw 0;
+
 
         .group {
             width: 33.333%;

@@ -80,7 +80,7 @@ p, address, li, h3, h4, h5 {
 }
 
 header, section {
-    padding: 0 #{$acol}vw;
+    margin: 0 #{$acol}vw;
 }
 #header {
     margin-top: #{$acol}vw;
