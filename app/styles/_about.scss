@@ -2,6 +2,21 @@
     About Page
  */
 
+header, section, aside {
+    margin: 0 #{$acol/2}vw;
+}
+#header {
+    margin-top: #{$acol/2}vw;
+}
+#about {
+    margin-bottom: #{$acol/2}vw;
+
+    section, aside {
+        margin-left: 10vw;
+    }
+}
+
+
 // Base
 .on-about {
     #header {
@@ -78,6 +93,7 @@
 
     #contact {
         margin-top: 9vw;
+        clear: left;
     }
 
 
@@ -138,6 +154,30 @@
         padding-bottom: 9vw;
     }
 
+    #share {
+        margin-top: 9*2vw;
+
+        h5 {
+            margin-bottom: 3vw;
+        }
+
+        p {
+            width: 33%;
+            float: left;
+            position: relative;
+            left: -2vw;
+        }
+
+        a {
+            border: 1px solid $accent;
+            padding: 3vw 4vw 2vw;
+            background-color: $accent;
+            text-decoration: none;
+
+            color: $bg;
+        }
+    }
+
 //}
 
 
@@ -175,10 +215,11 @@
         }
     }
 
-    header, section {
+    header, section, aside {
         padding: 0 #{$acol/2.5}vw 0;
         margin: 0;
     }
+
     #header {
         padding-top: 3vw;
         margin-top: 0;
@@ -191,7 +232,7 @@
     #about {
         position: relative;
 
-        section {
+        section, aside {
             margin-left: 0;
         }
     }
@@ -336,7 +377,7 @@
         }
 
     #share {
-        display: block;
+
     }
 
 
