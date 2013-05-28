@@ -226,9 +226,11 @@ img {
 figure {
     position: relative;
     z-index: 1000;
-    width: 100/20*6vw;
-    height: 100/20*4.5vw;
-    margin-bottom: 100/20*2vw;
+
+
+    width: 100/20*18vw;
+    height: 100/20*14vw;
+    margin-bottom: 100/20*6vw;
 
     img, figcaption {
         cursor: crosshair;
@@ -240,10 +242,10 @@ figure {
 
     .face {
         position: relative;
-        top: 100/20*0.5vw;
+        top: 100/20*1vw;
         left: 100/20*1.5vw;
 
-        width: 100/20*2.5vw;
+        width: 100/20*8vw;
 
 
         img {
@@ -263,13 +265,13 @@ figure {
 
         li {
             position: absolute;
-            width: 100/20*6vw;
-            height: 100/20*4.5vw;
+            width: 100/20*18vw;
+            height: 100/20*14vw;
         }
 
         img {
-            max-width: 100/20*6vw;
-            max-height: 100/20*4.5vw;
+            max-width: 100/20*18vw;
+            max-height: 100/20*14vw;
         }
 
         @for $i from 1 through 10 {
@@ -284,7 +286,7 @@ figure {
         position: absolute;
         z-index: 30000;
 
-        top: 100/20*4.8vw;
+        top: 100/20*14vw;
         left: 100/20*2.3vw;
     }
 }
