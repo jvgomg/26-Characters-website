@@ -197,22 +197,6 @@ img {
             }
         }
     }
-
-    .award {
-        @include spaces(6);
-    }
-
-    .award-type {
-        @include spaces(0);
-    }
-
-    .school {
-        @include spaces(0);
-    }
-
-    .school .year {
-        @include spaces(4);
-    }
 }
 
 
@@ -221,7 +205,6 @@ img {
  */
 #family {
     overflow: hidden;
-    @include rMarginTop(28 * 6);
 
     //@include rMarginLeft( ( 84 / 2 ) - 5 );
     //@include rMarginRight( ( 84 / 2 ) - 5 );
@@ -297,6 +280,10 @@ figure {
     }
 }
 
+/*
+    Family Page
+ */
+@import '_family.scss';
 
 /*
     About Page

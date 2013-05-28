@@ -1,0 +1,85 @@
+
+
+// Mobile
+#family-header {
+    margin-top: 3 * 9vw;
+
+    .award {
+        @include spaces(8);
+    }
+
+    .award-type {
+        @include spaces(0);
+        margin-bottom: 9vw;
+    }
+
+    .school {
+        //@include spaces(0);
+    }
+
+    .school .year {
+        @include spaces(4);
+    }
+
+}
+
+#family {
+    margin-top: 8 * 9vw;
+}
+
+// Tablet
+@media screen and (min-width: 680px) {
+
+    #family {
+        margin-top: 8 * 6vw;
+    }
+
+    #family-header {
+        padding: 0 2.4vw;
+        margin-top: 2 * 9vw;
+
+        .award {
+            @include spaces(13);
+        }
+
+        .school {
+            @include spaces(4);
+        }
+    }
+}
+
+
+// Desktop
+@media screen and (min-width: 1200px) {
+
+    #header {
+        padding-top: 0 !important;
+    }
+
+    #family {
+        margin-top: 5 * 8vw;
+    }
+
+
+    #family-header {
+        padding: 0 5vw;
+        margin-top: 3 * 6vw;
+
+        .award {
+            @include spaces(7);
+        }
+
+        .award-type {
+            margin-bottom: 0;
+        }
+
+        .school {
+            @include spaces(7);
+        }
+
+        .school .year {
+            @include spaces(12);
+        }
+    }
+
+}
