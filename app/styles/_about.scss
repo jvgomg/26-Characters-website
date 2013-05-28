@@ -12,6 +12,13 @@
     }
 }
 
+#header {
+    h1 {
+        @include spaces(2);
+        margin: 1*9vw 0;
+    }
+}
+
 #about {
     display: none;
 }
@@ -26,16 +33,18 @@
     .ampersand,
     .venue,
     .city,
-    .register-link {
+    .register-link,
+    .dash {
         float: left;
+        display: block;
     }
 
-    .degree,
     .date-1,
     .ampersand,
     .venue,
     .city,
-    .register-link {
+    .register-link,
+    .dash {
         clear: left;
     }
 
@@ -45,17 +54,25 @@
         margin-bottom: 9vw;
     }
 
+
+    .at {
+       display: none;
+    }
     .degree {
-        @include spaces(5);
+        @include spaces(1);
     }
     .date-1 {
-        @include spaces(5);
+        @include spaces(11);
     }
     .date-2 {
-        @include spaces(4);
+        @include spaces(11);
     }
     .month {
-        @include spaces(1);
+        @include spaces(14);
+    }
+
+    .register-link {
+        @include spaces(2);
     }
 }
 
@@ -67,6 +84,12 @@
     #contact,
     #location {
         h3 {
+            margin-bottom: 0;
+        }
+    }
+
+    #location {
+        p {
             margin-bottom: 0;
         }
     }
@@ -83,6 +106,9 @@
     #logos {
         overflow: hidden;
 
+        position: relative;
+        left: -2vw;
+
         a {
             float: left;
         }
@@ -96,15 +122,20 @@
         .show {
             position: relative;
             top: 6vw;
-            left: 2vw;
+            left: 4vw;
             width: 24%;
         }
     }
 
-    #awards {
+    #awards,
+    #staff {
         border: 1px solid $accent;
-        padding: 9vw #{$acol/2}vw 0;
-        margin: 9vw #{$acol/2}vw 9vw;
+        padding: 9vw #{$acol}vw 0;
+        margin: 9vw #{$acol}vw 9vw;
+    }
+
+    #staff {
+        padding-bottom: 9vw;
     }
 
 //}
@@ -135,7 +166,7 @@
         margin: #{$acol/2}vw;
         background-color: $bg;
 
-        min-height: 150vw;
+        min-height: 154vw;
     }
     .on-about {
         #cover {
@@ -151,10 +182,18 @@
     #header {
         padding-top: 3vw;
         margin-top: 0;
+
+        h1 {
+            margin: 6vw 0;
+        }
     }
 
     #about {
         position: relative;
+
+        section {
+            margin-left: 0;
+        }
     }
 
     #header {
@@ -179,11 +218,6 @@
 
         .at {
             @include spaces(27);
-        }
-        .dash {
-            display: block;
-            float: left;
-            clear: left;
         }
         .degree {
             @include spaces(1);
@@ -243,7 +277,7 @@
         #awards {
             border: none;
 
-            top: 6*3vw;
+            top: 4*3vw;
             left: 8vw;
             width: 60vw;
 
@@ -262,22 +296,19 @@
 
         #location {
 
-            top: 23 * 3vw;
+            top: 20 * 3vw;
             left: 96/20*15.5vw;
 
             h3 {
                 display: none;
-            }
-            p {
-                margin-bottom: 0;
             }
         }
 
         #logos {
             width: 40vw;
 
-            top: 25 * 3vw;
-            left: 96/20*12.5vw;
+            top: 22 * 3vw;
+            left: 96/20*12.1vw;
 
 
             .show {
@@ -288,14 +319,15 @@
         }
 
         #contact {
-            top: 36 * 3vw;
+            top: 35 * 3vw;
             left: 96/20*1.8vw;
         }
 
         #staff {
-            top: 33 * 3vw;
+            top: 31 * 3vw;
             left: 96/20*9.5vw;
             width: 96/20*9vw;
+            border: none;
 
             .group {
                 width: 50%;

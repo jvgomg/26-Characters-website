@@ -68,7 +68,7 @@ p, li, h3, h4, h5 {
 
 h1, h2, .huge  {
     font-size: 8vw;
-    line-height: 8vw;
+    line-height: 9vw;
 
     margin: 0;
 }
@@ -80,13 +80,17 @@ p, address, li, h3, h4, h5 {
 }
 
 header, section {
-    margin: 0 #{$acol}vw;
+    margin: 0 #{$acol/2}vw;
 }
 #header {
-    margin-top: #{$acol}vw;
+    margin-top: #{$acol/2}vw;
 }
 #about {
-    margin-bottom: #{$acol}vw;
+    margin-bottom: #{$acol/2}vw;
+
+    section {
+        margin-left: 10vw;
+    }
 }
 
 
