@@ -258,8 +258,6 @@ $figuresLength: length($figures);
     $y: nth( $xy, 2 );
 
     .caption-#{$i} {
-        @include rLeft( $spaceX *  ( $x ) );
-        @include rTop( $spaceY *  ( $y ) );
     }
 }
 
@@ -272,8 +270,6 @@ $figuresLength: length($figures);
     $y: nth( $xy, 2 );
 
     .face-#{$i} {
-        @include rLeft( $spaceX *  ( $x ) );
-        @include rTop( $spaceY *  ( $y ) );
     }
 }
 
@@ -286,9 +282,6 @@ $figuresLength: length($figures);
     $w: nth( $xyw, 3 );
 
     .landscape-#{$i} {
-        @include rLeft( $spaceX *  ( $x ) );
-        @include rTop( $spaceY *  ( $y ) );
-        @include rWidth( $spaceX * ( $w ) );
     }
 }
 
@@ -301,9 +294,6 @@ $figuresLength: length($figures);
     $w: nth( $xyw, 3 );
 
     .portrait-#{$i} {
-        @include rLeft( $spaceX *  ( $x ) );
-        @include rTop( $spaceY *  ( $y ) );
-        @include rWidth( $spaceX *  ( $w - 12 ) );
     }
 }
 
@@ -314,8 +304,6 @@ $figuresLength: length($figures);
     $y: nth( $xy, 2 );
 
     .figure-#{$i} {
-        @include rPaddingLeft( $spaceX *  ( $x ) );
-        @include rPaddingTop( $spaceY *  ( $y ) );
     }
 }
 

@@ -206,11 +206,7 @@ img {
 #family {
     overflow: hidden;
 
-    //@include rMarginLeft( ( 84 / 2 ) - 5 );
-    //@include rMarginRight( ( 84 / 2 ) - 5 );
-
     & > li {
-        @include rMinHeight( 512 );
 
         float: left;
 
@@ -244,7 +240,6 @@ figure {
 
         img {
             position: absolute;
-            @include rMaxHeight( 242 );
 
             &:first-child {
                 z-index: 200;
@@ -262,8 +257,6 @@ figure {
         }
 
         img {
-            //@include rMaxWidth( 512 );
-            //@include rMaxHeight( 320 );
         }
 
         @for $i from 1 through 10 {
