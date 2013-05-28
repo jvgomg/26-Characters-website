@@ -107,7 +107,7 @@ header, section {
 
     h1, h2, .huge  {
         font-size: 5vw;
-        line-height: 1;
+        line-height: 6vw;
     }
 
 
@@ -124,10 +124,11 @@ header, section {
 
     h1, h2, .huge  {
         font-size: 6vw;
+        //line-height: 6vw;
     }
 
     p,  address, li, h3, h4, h5 {
-        font-size: 1.5vw;
+        font-size: 1.4vw;
         line-height: 2vw;
         margin-bottom: 2vw;
     }
