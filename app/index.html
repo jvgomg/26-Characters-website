@@ -35,6 +35,10 @@
                 test: Modernizr.cssremunit,
                 nope: '/scripts/vendor/rem.min.js'
             });
+
+            if ( Modernizr.touch ) {
+                window.alert('Touch');
+            }
         </script>
 
 
