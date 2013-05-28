@@ -188,10 +188,19 @@ header, section, aside {
 @media screen and (min-width: 680px) and (-webkit-min-device-pixel-ratio: 2),
        screen and (min-width: 680px) and (max-moz-device-pixel-ratio: 2) {
 
-        .on-about #cover {
-            background-image: url(../images/ptn-x2.png) !important;
-            background-size: 5px auto;
+    .on-about #cover {
+        background-image: url(../images/ptn-x2.png) !important;
+        background-size: 5px auto;
+    }
+
+    #header nav a {
+        background-image: url(../images/arrow-x2.png) !important;
+        background-size: 16px auto;
+
+        .on-about & {
+            background-image: url(../images/cross-x2.png) !important;
         }
+    }
 }
 
 @media screen and (min-width: 680px) {
@@ -408,7 +417,7 @@ header, section, aside {
         a {
             background-image: url(../images/arrow.png);
             background-repeat: no-repeat;
-            background-position: 8vw center;
+            background-position: 7.5vw center;
         }
 
 
