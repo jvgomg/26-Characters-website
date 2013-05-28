@@ -12,7 +12,7 @@ $pageWidth: 96;
 $cols: 20;
 $acol: $pageWidth / $cols;
 
-$letter: $cols / 5;
+$letter: 20 / 5;
 
 @import "_mixins.scss";
 @import "_animate.sass";
@@ -72,6 +72,10 @@ ol, ul {
 
 li address {
     margin: 0;
+}
+
+* {
+    @include box-sizing( border-box );
 }
 
 
