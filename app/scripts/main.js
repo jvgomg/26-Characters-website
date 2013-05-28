@@ -33,10 +33,10 @@ require(['jquery', 'flickrr', 'layoutrr', 'jquery.shuffle'], function ($, flickr
         $award.html( $award.html().trim() );
 
         // Add layout classes
-        layoutrr.setup( $family );
+        //layoutrr.setup( $family );
 
         // Flick through effect
-        flickrr.setup( $family );
+        //flickrr.setup( $family );
 
         // Fade page in
         //$body.removeClass('fadedOut').addClass('fadeIn');
@@ -49,9 +49,38 @@ require(['jquery', 'flickrr', 'layoutrr', 'jquery.shuffle'], function ($, flickr
             console.log('Body click');
 
             // Refresh all layout classes
-            layoutrr.refresh();
+            //layoutrr.refresh();
+        });
+    });
+
+
+
+    $(function(){
+
+        var causeRepaintsOn = $("h1, h2, h3, p, li");
+        $(window).resize(function() {
+
+            console.log('Resize');
+
+            causeRepaintsOn.each(function(){
+                var z = $(this).css("z-index");
+                $(this).css("z-index", z);
+            });
         });
 
     });
 
+
 });
+
+
+
+
+
+
+
+
+
+
+
+

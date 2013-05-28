@@ -5,13 +5,21 @@
 $fontsize-base: 16;
 $remuxFallback: true;
 
-$rwidth: 1575;
+/*
+    GRID !!!!!!1!!
+ */
+$pageWidth: 96;
+$cols: 20;
+$acol: $pageWidth / $cols;
+
+$letter: $cols / 5;
 
 @import "_mixins.scss";
 @import "_animate.sass";
 @import "_letters.scss";
 
 @import "_layoutrr.scss";
+@import '_typeScale.scss';
 
 @import "compass/css3/box-sizing";
 @import "compass/css3/transition";
@@ -41,8 +49,9 @@ body {
     @include karben-normal;
 }
 
-h1, h2, h3, h4, h5, h6, strong, em {
+h1, h2, h3, h4, h5, h6, p, strong, em {
     font-weight: normal;
+    margin-top: 0;
 }
 
 abbr[title] {
@@ -53,36 +62,21 @@ address {
     font-style: normal;
 }
 
+
 /*
-    Typography scale
-*/
-
-html {
-    font-size: 1vw;
-}
-
-h1, h2 {
-    @include rFontSize( 112 );
-    @include rLineHeight( 112 );
-
-    @include rLetterSpacing( 8.15 );
+    Misc Reset
+ */
+ol, ul {
     margin: 0;
 }
 
-p, a, li {
-    @include rFontSize( 20 );
-    @include rLineHeight( 28 );
-    @include rLetterSpacing( 0.75 );
-}
-
-a:hover, a.static {
-    font-style: italic;
-    border: none;
+li address {
+    margin: 0;
 }
 
 
 /*
-    Colors
+    Colors + hovers
  */
 $body: #0000ff;
 $bg: #fff;
@@ -95,9 +89,14 @@ body {
 
 a {
     color: $accent;
-    text-decoration: none;
-    border-bottom: 1px solid $accent;
+    text-decoration: underline;
+    //border-bottom: 1px solid $accent;
 }
+
+a:hover, a.static {
+    font-style: italic;
+}
+
 
 ::-moz-selection {
     background: $accent;
@@ -112,7 +111,6 @@ a {
 /*
     Base
 */
-
 .hidden {
     display: none !important;
     visibility: hidden;
@@ -163,15 +161,16 @@ img {
     //@include animate(fadeIn, 0.75s, 0s);
 }
 
+.on-about .family-page {
+    display: none !important; // toggle
+}
+
 
 /*
     Page header
  */
 #header {
     position: fixed;
-    @include rTop( 28 * 1 );
-
-    width: 110%;
 
     nav {
         position: absolute;
@@ -184,7 +183,6 @@ img {
         position: relative;
         z-index: 1000;
 
-        @include spaces(3);
     }
 
     h2 {
@@ -209,16 +207,6 @@ img {
     }
 }
 
-#bar {
-    @include rWidth($rwidth);
-    height: 20px;
-    background-color: red;
-    display: absolute;
-    top: 0;
-    left: 0;
-}
-
-
 
 /*
     Family
@@ -226,13 +214,10 @@ img {
 #family {
     @include rMarginTop(28 * 6);
 
-    @include rWidth( $rwidth );
-
     //@include rMarginLeft( ( 84 / 2 ) - 5 );
     //@include rMarginRight( ( 84 / 2 ) - 5 );
 
     & > li {
-        @include rWidth( $rwidth / 16 * 5  );
         @include rMinHeight( 512 );
 
         float: left;
@@ -297,16 +282,6 @@ figure {
 }
 
 
-
-
-/*
-    About Page
- */
-#about {
-    display: none;
-}
-
-
 // Logos
 #logos {
     clear: both;
@@ -331,8 +306,10 @@ figure {
     }
 
 
-
-
+/*
+    About Page
+ */
+@import '_about.scss';
 
 /*
     Breakpoints

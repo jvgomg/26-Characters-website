@@ -1,0 +1,33 @@
+/*
+    About Page
+ */
+
+// Base
+#about {
+
+
+    #awards {
+        margin-top: 9vw;
+    }
+
+
+    #contact,
+    #location {
+        h3 {
+            margin-bottom: 0;
+        }
+    }
+
+    #staff {
+       h4,
+       li {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.on-about {
+    #header {
+        position: static;
+    }
+}

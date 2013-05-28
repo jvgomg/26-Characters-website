@@ -110,6 +110,18 @@
     }
 }
 
+@mixin rMarginBottom($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        margin-bottom: $value*1px;
+        margin-bottom: $processingRem+rem;
+    }
+    @else {
+        margin-bottom: $processingRem+rem;
+    }
+}
+
 
 @mixin rTop($value) {
   $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
@@ -198,11 +210,11 @@
   $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
 
     @if $remuxFallback == true {
-        Min-width: $value*1px;
-        Min-width: $processingRem+rem;
+        min-width: $value*1px;
+        min-width: $processingRem+rem;
     }
     @else {
-        Min-width: $processingRem+rem;
+        min-width: $processingRem+rem;
     }
 }
 
@@ -210,11 +222,23 @@
   $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
 
     @if $remuxFallback == true {
-        Min-height: $value*1px;
-        Min-height: $processingRem+rem;
+        min-height: $value*1px;
+        min-height: $processingRem+rem;
     }
     @else {
-        Min-height: $processingRem+rem;
+        min-height: $processingRem+rem;
+    }
+}
+
+@mixin rBorderWidth($value) {
+  $processingRem: ((round(($value / $fontsize-base) * 10000000)) / 10000000);
+
+    @if $remuxFallback == true {
+        border-width: $value*1px;
+        border-width: $processingRem+rem;
+    }
+    @else {
+        border-width: $processingRem+rem;
     }
 }
 
