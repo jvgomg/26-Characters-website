@@ -31,6 +31,7 @@
         // Change page
         $nav.click(function(e) {
             e.preventDefault();
+            window.scrollTo(0, 0);
             $body.toggleClass('on-about');
         });
 
