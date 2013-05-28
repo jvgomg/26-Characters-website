@@ -17,7 +17,8 @@ require(['jquery', 'flickrr', 'layoutrr', 'jquery.shuffle'], function ($, flickr
     // use app here
 
     var $family = $('#family'),
-        $body = $('body');
+        $body = $('body'),
+        $nav = $('nav a');
 
     // Shuffle the family
     $family.children().shuffle();
@@ -44,14 +45,12 @@ require(['jquery', 'flickrr', 'layoutrr', 'jquery.shuffle'], function ($, flickr
         //layoutrr.destroy();
         //flickrr.destroy();
 
-        // Whole page click event
-        $body.click(function() {
-            console.log('Body click');
+        console.log($nav);
 
-            //$body.toggleClass('on-about');
-
-            // Refresh all layout classes
-            //layoutrr.refresh();
+        // Change page
+        $nav.click(function(e) {
+            e.preventDefault();
+            $body.toggleClass('on-about');
         });
     });
 

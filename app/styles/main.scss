@@ -190,6 +190,18 @@ img {
         top: 0;
         right: 0;
         z-index: 10001;
+
+        a {
+            border: 1px solid $accent;
+            padding: 3vw 3vw 2vw;
+            text-decoration: none;
+
+            .on-about & {
+                color: $bg;
+                background-color: $accent;
+                font-style: italic;
+            }
+        }
     }
 
     .award {

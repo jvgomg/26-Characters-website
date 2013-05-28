@@ -162,18 +162,17 @@ header, section, aside {
         }
 
         p {
-            width: 33%;
             float: left;
             position: relative;
-            left: -2vw;
+            left: -3vw;
+            margin-right: 3vw;
         }
 
         a {
             border: 1px solid $accent;
-            padding: 3vw 4vw 2vw;
+            padding: 3vw 3vw 2vw;
             background-color: $accent;
             text-decoration: none;
-
             color: $bg;
         }
     }
@@ -309,7 +308,8 @@ header, section, aside {
         #location,
         #contact,
         #logos,
-        #staff{
+        #staff,
+        #share{
             padding: 0;
             margin: 0;
             position: absolute;
