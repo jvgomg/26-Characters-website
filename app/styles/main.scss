@@ -176,21 +176,20 @@ img {
 #header {
     position: fixed;
 
-    nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-    }
-
     h1 {
         position: relative;
-        z-index: 1000;
-
+        z-index: 10000;
     }
 
     h2 {
-        z-index: -1000;
+        z-index: -10000;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10001;
     }
 
     .award {
@@ -209,6 +208,10 @@ img {
     .school .year {
         @include spaces(4);
     }
+}
+
+#share {
+    display: none;
 }
 
 
