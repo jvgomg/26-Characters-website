@@ -58,25 +58,19 @@
             }
         });
 
-
-    });
-
-
-    /*
-        Repainting
-     */
-    var causeRepaintsOn = $("h1, h2, h3, p, li");
-    $(window).resize(function() {
-
-        console.log('Resize');
-
-        causeRepaintsOn.each(function(){
-            var z = $(this).css("z-index");
-            //$(this).css("z-index", z);
+        /*
+            Repainting
+         */
+        var causeRepaintsOn = $("h1, h2, h3, h4, h5, p, li");
+        $(window).resize(function() {
+            causeRepaintsOn.each(function(){
+                var z = $(this).css("z-index");
+                $(this).css("z-index", z);
+            });
         });
+
+
     });
-
-
 
 })();
 
