@@ -244,6 +244,7 @@ header, section, aside {
         //padding-top: 1px;
         margin-top: 0;
         padding-top: 2.4vw;
+        overflow: hidden;
 
         h1 {
             margin: 6vw 0;
@@ -318,7 +319,7 @@ header, section, aside {
         .tickets {
             display: block;
             clear: left;
-            @include spaces(2);
+            //@include spaces(2);
         }
 
 
@@ -408,7 +409,7 @@ header, section, aside {
         left: 100/20*16vw;
 
         .on-about & {
-            top: -0.75vw;
+            top: 2.75vw;
 
             a {
                 background-image: url(../images/cross.png);
