@@ -205,7 +205,7 @@ header, section, aside {
         margin: #{$acol/2}vw;
         background-color: $bg;
 
-        min-height: 154vw;
+        min-height: 152vw;
     }
     .on-about {
         #cover {
@@ -250,6 +250,10 @@ header, section, aside {
             //margin-top: 6vw;
         }
 
+        h2, .huge {
+            width: 110%;
+        }
+
         .degree,
         .month,
         .city {
@@ -269,7 +273,6 @@ header, section, aside {
         }
         .date-2 {
             @include spaces(17);
-            //margin-top:  1 * 6vw;
         }
         .month {
             @include spaces(20);
@@ -319,7 +322,7 @@ header, section, aside {
             border: none;
 
             top: 4*3vw;
-            left: 8vw;
+            left: 8.5vw;
             width: 60vw;
 
             .group {
@@ -337,8 +340,8 @@ header, section, aside {
 
         #location {
 
-            top: 20 * 3vw;
-            left: 96/20*15.5vw;
+            top: 21 * 3vw;
+            left: 100/20*14vw;
 
             h3 {
                 display: none;
@@ -348,7 +351,7 @@ header, section, aside {
         #logos {
             width: 40vw;
 
-            top: 22 * 3vw;
+            top: 24 * 3vw;
             left: 96/20*12.1vw;
 
 
@@ -425,7 +428,7 @@ header, section, aside {
 }
 
 
-// Tablet
+// Desktop
 @media screen and (min-width: 1200px) {
 
     nav, #share {
