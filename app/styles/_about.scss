@@ -12,7 +12,7 @@ header, section, aside {
     margin-bottom: #{$acol/2}vw;
 
     section, aside {
-        margin-left: 10vw;
+        margin-left: 11vw;
     }
 }
 
@@ -376,10 +376,51 @@ header, section, aside {
             }
         }
 
-    #share {
 
+    #header nav {
+        top: 3vw;
+
+        p {
+            //border: none;
+            //background-color: $accent;
+        }
+    }
+    #share {
+        top: -3*3vw;
+        right: 0;
+        width: 20vw;
+        height: 10vw;
+        position: absolute;
+
+        h5 {
+            display: none;
+        }
+
+        p {
+            float: none;
+            margin: 0;
+            position: static;
+        }
+
+        a {
+            width: auto;
+            position: absolute;
+            display: block;
+            right: 0;
+            left: auto;
+        }
+
+        .fb a {
+            top: 2*3vw;
+        }
     }
 
+    #header nav,
+    #share {
+        a {
+            padding: 1vw 4vw 0.75vw 1vw;
+        }
+    }
 
 }
 
