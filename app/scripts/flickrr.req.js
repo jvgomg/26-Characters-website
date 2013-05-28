@@ -1,5 +1,5 @@
 /*global console */
-var Flickrr = function(){
+define('flickrr', ['jquery'], function ($) {
     'use strict';
 
     /*
@@ -116,4 +116,4 @@ var Flickrr = function(){
         setup: setup,
         destroy: destroy
     };
-};
+});

@@ -1,5 +1,5 @@
 /*global console */
-var Layoutrr = function(){
+define('layoutrr', ['jquery'], function ($) {
     'use strict';
 
     /*
@@ -115,23 +115,6 @@ var Layoutrr = function(){
     };
 
 
-    var applyLumps = function() {
-
-        $figures.each(function(){
-
-            console.log(this);
-
-            var left = getRandom(0,4),
-                top = getRandom(0,3);
-
-            $(this).css( 'margin-left', left*2.5 +'vw' );
-            $(this).css( 'margin-top', top*2.5 +'vw' );
-
-        });
-
-    }
-
-
     /*
         Public
      */
@@ -154,12 +137,9 @@ var Layoutrr = function(){
         $captions = $family.find('figcaption');
         $images = $family.find('.portfolio img');
         $faces = $family.find('.face');
-        $figures = $family.find('figure');
+        $figures = $family.find('>li');
 
-        //generateClasses();
-
-        // Apply lumps to figures
-        applyLumps();
+        generateClasses();
 
         console.log('Layout Setup complete');
     };
@@ -169,4 +149,4 @@ var Layoutrr = function(){
         refresh: refresh,
         destroy: destroy
     };
-};
+});
