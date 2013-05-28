@@ -94,7 +94,7 @@ body {
 a {
     color: $accent;
     text-decoration: underline;
-    //border-bottom: 1px solid $accent;
+    border: none !important;
 }
 
 a:hover, a.static {
@@ -188,7 +188,7 @@ img {
         z-index: 10001;
 
         a {
-            border: 1px solid $accent;
+            border: 1px solid $accent !important;
             padding: 3vw 3vw 2vw;
             text-decoration: none;
 
