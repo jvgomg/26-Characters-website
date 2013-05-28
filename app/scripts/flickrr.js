@@ -93,20 +93,9 @@ var Flickrr = function(){
         console.log('Flickrr Destroy');
 
         console.warn('Flickrr Destroy not working');
-        $profiles.find('img').each(function(i){
-            console.log(this);
-            console.log( $(this) );
-            var off = $(this).off('mouseenter', 'img');
-            console.log(this);
-            console.log( $(this) );
-
-            // TODO. unbind events..
-            $(this).unbind();
-        });
     };
 
     var setup = function( family ) {
-        console.log('Setting up Flickrr');
 
         $family = $(family);
         $profiles = $family.find('figure');
@@ -122,7 +111,6 @@ var Flickrr = function(){
 
         });
 
-        console.log('Flickrr setup complete');
     };
 
 

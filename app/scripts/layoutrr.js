@@ -52,7 +52,6 @@ var Layoutrr = function(){
                 }
             }
             else {
-                console.log('Port');
                 if ( ! flow ){
                     // More Left
                     $(this).css( 'padding-top', top * 2.5 +'vw' );
@@ -77,8 +76,6 @@ var Layoutrr = function(){
 
         $figures.each(function(){
 
-            console.log(this);
-
             var left = getRandom(0,4),
                 top = getRandom(0,3);
 
@@ -101,7 +98,6 @@ var Layoutrr = function(){
     };
 
     var setup = function( family ) {
-        console.log('Layoutrr Setup started');
 
         // Cache elements
         $family = $(family);
@@ -114,7 +110,6 @@ var Layoutrr = function(){
         addFigureLumps();
         addImageLumps();
 
-        console.log('Layout Setup complete');
     };
 
     return {
