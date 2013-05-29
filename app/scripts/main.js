@@ -61,7 +61,7 @@
         /*
             Repainting
          */
-        var causeRepaintsOn = $("h1, h2, h3, h4, h5, p, li");
+        var causeRepaintsOn = $("h1, h2, h3, h4, h5, p, li, address");
         $(window).resize(function() {
             causeRepaintsOn.each(function(){
                 var z = $(this).css("z-index");
