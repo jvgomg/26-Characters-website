@@ -84,10 +84,10 @@ header, section, aside {
         @include spaces(2);
     }
     .date-2 {
-        @include spaces(1);
+        @include spaces(4);
     }
     .month {
-        @include spaces(14);
+        @include spaces(11);
     }
 
     .register-link {
