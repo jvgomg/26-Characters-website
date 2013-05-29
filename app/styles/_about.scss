@@ -181,6 +181,20 @@
     }
 }
 
+#sign-up {
+    h2 {
+        margin-bottom: $mobile-line-height * 0.25;
+    }
+
+    label {
+        display: none;
+    }
+
+    input {
+        margin-bottom: $mobile-line-height * 0.5;
+    }
+}
+
 
 // Tablet
 @media screen and (min-width: $tabletBreak) and (-webkit-min-device-pixel-ratio: 2),
@@ -302,7 +316,8 @@
     #contact,
     #logos,
     #staff,
-    #share{
+    #share,
+    #sign-up{
         padding: 0;
         margin: 0;
         position: absolute;
@@ -408,6 +423,36 @@
         }
     }
 
+    #sign-up {
+        width: $col * 8;
+        top: $tablet-line-height * 30;
+        left: $col * 10;
+
+        border: 1px solid;
+        padding: $tablet-line-height*0.75 $col/2;
+
+        h2 {
+            font-size: $tablet-font-size;
+            line-height: $tablet-line-height;
+            margin-bottom: $tablet-line-height/1.5;
+        }
+
+        input {
+            float: left;
+            margin-bottom: 0;
+        }
+
+        input[type=email]{
+            height: $tablet-line-height * 1.5;
+            width: $col * 5;
+        }
+
+        input[type=submit]{
+            padding: 0 1.5vw;
+            height: $tablet-line-height * 1.5;
+        }
+    }
+
 }
 
 
@@ -508,6 +553,30 @@
         }
         .email {
             margin-left: 100/20*1.25vw;
+        }
+    }
+
+    #sign-up {
+        width: $col * 5;
+        top: $tablet-line-height * 25;
+        left: $col * 13;
+
+        padding: $desktop-line-height $col/2;
+
+        h2 {
+            font-size: $desktop-font-size;
+            line-height: $desktop-line-height;
+            margin-bottom: $desktop-line-height/1.5;
+        }
+
+        input[type=email]{
+            height: $desktop-line-height * 1.5;
+            width: 100%;
+            margin-bottom: $desktop-line-height * 0.5;
+        }
+
+        input[type=submit]{
+            height: $desktop-line-height * 1.5;
         }
     }
 

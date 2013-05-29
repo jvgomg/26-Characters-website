@@ -16,7 +16,7 @@ p, li, h3, h4, h5 {
     letter-spacing: 0.05em;
 }
 
-p, address, li, h3, h4, h5 {
+p, address, li, h3, h4, h5, input {
     font-size: $mobile-font-size;
     line-height: $mobile-line-height;
     margin-bottom: $mobile-line-height;
@@ -32,15 +32,15 @@ h1, h2, .huge  {
 // TABLET
 @media screen and (min-width: $tabletBreak) {
 
-    p, address, li, h3, h4, h5 {
+    p, address, li, h3, h4, h5, input {
         font-size: $tablet-font-size;
         line-height: $tablet-line-height;
         margin-bottom: $tablet-line-height;
     }
 
     h1, h2, .huge  {
-        font-size: 6vw;
-        line-height: 6vw;
+        font-size: $tablet-big-line-height;
+        line-height: $tablet-big-line-height;
     }
 
 }
@@ -49,7 +49,7 @@ h1, h2, .huge  {
 // DESKTOP
 @media screen and (min-width: $desktopBreak) {
 
-    p,  address, li, h3, h4, h5 {
+    p,  address, li, h3, h4, h5, input {
         font-size: $desktop-font-size;
         line-height: $desktop-line-height;
         margin-bottom: $desktop-line-height;

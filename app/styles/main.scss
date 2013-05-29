@@ -101,9 +101,8 @@ img {
     display: block;
 }
 
-
 /*
-    Colors + hovers
+    Colors + hovers + forms
  */
 $body: #0000ff;
 $bg: #fff;
@@ -132,6 +131,19 @@ a:hover, a.static {
     background: $accent;
     color: $bg;
 }
+
+input[type=email] {
+    border: 1px solid $accent;
+    color: $accent;
+}
+
+input[type=submit] {
+    background-color: $accent;
+    color: $bg;
+    border: 1px solid $accent;
+    padding: 2vw 2vw 1.75vw 2vw;
+}
+
 
 
 /*
