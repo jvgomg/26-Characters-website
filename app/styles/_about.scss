@@ -500,6 +500,13 @@ header, section, aside {
 
 #share {
     right: 2.25vw;
+
+    .fb a {
+        background-position: 5.5vw center;
+    }
+    .tw a {
+        background-position: 6.25vw center;
+    }
 }
 
     .on-about {

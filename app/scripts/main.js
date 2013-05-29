@@ -69,6 +69,43 @@
             });
         });
 
+        /*
+            Sharrre
+         */
+        $('#share .tw').sharrre({
+            share: {
+                twitter: true
+            },
+            template: '<a class="box" href="#">Tweet</a>',
+            enableHover: false,
+            enableTracking: true,
+            buttons: {
+                twitter: {
+                    via: '26chars',
+                    related: 'thedegreeshow'
+                }
+            },
+            click: function(api, options){
+                api.simulateClick();
+                api.openPopup('twitter');
+            }
+        });
+        $('#share .fb').sharrre({
+            share: {
+                facebook: {
+                    send: 'true'
+                }
+            },
+            template: '<a class="box" href="#">Like</a>',
+            enableHover: false,
+            enableTracking: true,
+            click: function(api, options){
+                api.simulateClick();
+                api.openPopup('facebook');
+            }
+        });
+
+
 
     });
 
