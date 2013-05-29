@@ -4,20 +4,28 @@
 
     var $family = $('#family'),
         $body = $('body'),
-        $nav = $('nav a'),
-        $award = $('#family-header .award');
+        $nav = $('nav a');
 
     // Shuffle the family
     $family.children().shuffle();
 
     $(function() {
 
-        // Split award into 2 lines
-        var $newAwardType = $('<h2 class="award-type">').insertAfter($award);
-        $award.find('abbr').appendTo($newAwardType);
+        /*
+            About page toggle
+        */
+        var onAbout = false;
 
-        // Trim whitespace
-        $award.html( $award.html().trim() );
+        $nav.click(function(e) {
+            e.preventDefault();
+            window.scrollTo(0, 0);
+            $body.toggleClass('on-about');
+
+            if( onAbout ) {
+                pack.layout();
+            }
+            onAbout = !onAbout;
+        });
 
         // Add layout classes
         Layoutrr().setup( $family );
@@ -34,24 +42,6 @@
         var pack = $family.data('packery');
 
         $family.addClass('on');
-
-
-        /*
-            About page toggle
-        */
-        var onAbout = false;
-
-        $nav.click(function(e) {
-            e.preventDefault();
-            window.scrollTo(0, 0);
-            $body.toggleClass('on-about');
-
-            if( onAbout ) {
-                pack.layout();
-            }
-
-            onAbout = !onAbout;
-        });
 
 
         /*

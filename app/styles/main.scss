@@ -1,31 +1,50 @@
-@import "compass";
-
-@import "_normalize.scss";
-
-$fontsize-base: 16;
-$remuxFallback: true;
-
 /*
-    GRID !!!!!!1!!
+    26 Characters Styles
+    Author: James Greenaway @jvgreenaway
  */
-$pageWidth: 96;
-$cols: 20;
-$acol: $pageWidth / $cols;
 
-$letter: 20 / 5;
-
+// Imports
+@import "compass/css3/box-sizing";
+@import "_normalize.scss";
 @import "_mixins.scss";
 @import "_animate.sass";
-//@import "_letters.scss";
+@import "_helpers.scss";
 
-@import "_layoutrr.scss";
+/*
+    Vars n ting
+ */
+
+// Basic grid idea
+$cols: 20;
+$col: 100vw / $cols;
+$letter: $col / 5;
+
+// Breakpoints
+$tabletBreak: 680px;
+$desktopBreak: 1200px;
+
+// Type Scale
+$mobile-font-size: 6vw;
+$mobile-line-height: 9vw;
+$mobile-big-font-size: 8vw;
+$mobile-big-line-height: $mobile-line-height * 1;
+
+$tablet-font-size: 2vw;
+$tablet-line-height: 3vw;
+$tablet-big-font-size: $tablet-line-height * 2;
+$tablet-big-line-height: $tablet-line-height * 2;
+
+$desktop-font-size: 1.4vw;
+$desktop-line-height: 2vw;
+$desktop-big-font-size: 7.8vw;
+$desktop-big-line-height: $desktop-line-height * 4;
+
+
+/*
+    The basics
+ */
+
 @import '_typeScale.scss';
-
-@import "compass/css3/box-sizing";
-@import "compass/css3/transition";
-@import "compass/css3/columns";
-
-$default-transition-duration: 0.3s;
 
 @mixin karben-normal {
     font-family: Karben105Mono,"Lucida Console", Monaco, monospace;
@@ -39,11 +58,9 @@ $default-transition-duration: 0.3s;
     font-style: italic;
 }
 
-
 /*
     Type reset
  */
-
 body {
     min-height: 100%;
     @include karben-normal;
@@ -62,20 +79,26 @@ address {
     font-style: normal;
 }
 
-
 /*
     Misc Reset
  */
+* {
+    @include box-sizing( border-box );
+}
+
 ol, ul {
     margin: 0;
+    list-style: none;
+    padding: 0;
 }
 
 li address {
     margin: 0;
 }
 
-* {
-    @include box-sizing( border-box );
+img {
+    height: auto;
+    display: block;
 }
 
 
@@ -101,7 +124,6 @@ a:hover, a.static {
     font-style: italic;
 }
 
-
 ::-moz-selection {
     background: $accent;
     color: $bg;
@@ -113,206 +135,26 @@ a:hover, a.static {
 
 
 /*
-    Base
-*/
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-ul, ol {
-    list-style: none;
-    padding: 0;
-}
-
-section {
-
-}
-
-img {
-    height: auto;
-    display: block;
-}
-
-/*
-    Effects
+    Page toggle
  */
-
-.js #family {
-    opacity: 0;
-
-    &.on {
-        opacity: 1;
-    }
-}
-
 .on-about .family-page {
     display: none !important; // toggle
 }
 
 
 /*
-    Page header
+    The page parts
  */
-#header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
 
-    nav {
-        position: absolute;
-        top: 9vw;
-        right: 3vw;
-        z-index: 10001;
+// Header
+@import "_header.scss";
 
-        a {
-            border: 1px solid $accent !important;
-            padding: 3vw 3vw 2vw;
-            text-decoration: none;
-
-            .on-about & {
-                color: $bg;
-                background-color: $accent;
-                font-style: italic;
-            }
-        }
-    }
-}
-
-
-/*
-    Family
- */
-#family {
-    overflow: hidden;
-
-    & > li {
-
-        float: left;
-
-        &.clearLeft {
-            clear: left;
-        }
-    }
-}
-
-#family-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 500;
-}
-
-figure {
-    position: relative;
-    z-index: 1000;
-
-
-    width: 100/20*18vw;
-    height: 100/20*14vw;
-    margin-bottom: 100/20*6vw;
-
-    img, figcaption {
-        cursor: crosshair;
-    }
-
-    img {
-        position: relative;
-    }
-
-    .face {
-        position: relative;
-        top: 100/20*1vw;
-        left: 100/20*1.5vw;
-
-        width: 100/20*8vw;
-
-
-        img {
-            position: absolute;
-            width: 100%;
-
-            &:first-child {
-                z-index: 200;
-            }
-            &:nth-child(2) {
-                z-index: 199;
-            }
-        }
-    }
-    .portfolio {
-        overflow: hidden;
-
-        li {
-            position: absolute;
-            width: 100/20*18vw;
-            height: 100/20*14vw;
-        }
-
-        img {
-            max-width: 100/20*18vw;
-            max-height: 100/20*14vw;
-        }
-
-        @for $i from 1 through 10 {
-            li:nth-child(#{$i}) img{
-                z-index: 199 - $i;
-            }
-        }
-
-    }
-
-    figcaption {
-        position: absolute;
-        z-index: 30000;
-
-        top: 100/20*14vw;
-        left: 100/20*2.3vw;
-    }
-}
-
-/*
-    Family Page
- */
+// Family
 @import '_family.scss';
+@import "_layoutrr.scss";
 
-/*
-    About Page
- */
+// About
 @import '_about.scss';
 
-/*
-    Breakpoints
-*/
 
-// Tablet size and below
-@media only screen and (max-width: 1040px) {
-
-    .js body.fadeIn {
-        //@include animate(fadeOut, 0.75s, 0s);
-    }
-
-}
-
+/* Bye bye */

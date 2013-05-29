@@ -1,128 +1,64 @@
-// layout IDs
-@media screen and (min-width: 300px) { html:after { content: "mobile"; display: none; } }
-@media screen and (min-width: 700px) { html:after { content: "desktop"; display: none; } }
-
-// mobile
-// @media screen and (min-width: 300px) { html { font-size: 10px; } }
-// @media screen and (min-width: 330px) { html { font-size: 11px; } }
-// @media screen and (min-width: 360px) { html { font-size: 12px; } }
-// @media screen and (min-width: 390px) { html { font-size: 13px; } }
-// @media screen and (min-width: 420px) { html { font-size: 14px; } }
-// @media screen and (min-width: 450px) { html { font-size: 15px; } }
-// @media screen and (min-width: 480px) { html { font-size: 16px; } }
-// @media screen and (min-width: 510px) { html { font-size: 17px; } }
-// @media screen and (min-width: 540px) { html { font-size: 18px; } }
-// @media screen and (min-width: 570px) { html { font-size: 19px; } }
-// @media screen and (min-width: 600px) { html { font-size: 20px; } }
-// @media screen and (min-width: 630px) { html { font-size: 21px; } }
-// @media screen and (min-width: 660px) { html { font-size: 22px; } }
-// @media screen and (min-width: 690px) { html { font-size: 23px; } }
-
-// // desktop
-// @media screen and (min-width: 700px) { html { font-size: 10px; } }
-// @media screen and (min-width: 770px) { html { font-size: 11px; } }
-// @media screen and (min-width: 840px) { html { font-size: 12px; } }
-// @media screen and (min-width: 910px) { html { font-size: 13px; } }
-// @media screen and (min-width: 980px) { html { font-size: 14px; } }
-// @media screen and (min-width: 1050px) { html { font-size: 15px; } }
-// @media screen and (min-width: 1120px) { html { font-size: 16px; } }
-// @media screen and (min-width: 1190px) { html { font-size: 17px; } }
-// @media screen and (min-width: 1260px) { html { font-size: 18px; } }
+/*
+    Layout IDs
+ */
+html:after { content: "mobile"; display: none; }
+@media screen and (min-width: 680px) { html:after { content: "tablet"; display: none; } }
+@media screen and (min-width: 1200px) { html:after { content: "desktop"; display: none; } }
 
 
 /*
     Typography scale
 */
 
-// html {
-//     //font-size: 1vw;
-// }
-
-// h1, h2, .huge  {
-//     @include rFontSize( 112 );
-//     @include rLineHeight( 112 );
-//     @include rLetterSpacing( 8.15 );
-//     margin: 0;
-
-//     a {
-//         @include rBorderWidth( 3 );
-//     }
-// }
-
-// p, li, h3, h4, h5 {
-//     @include rFontSize( 20 );
-//     @include rLineHeight( 28 );
-//     @include rLetterSpacing( 0.75 );
-//     margin: 0;
-// }
-
-/*
-    Typography scale
-*/
 // MOBILE
-
 h1, h2, .huge,
 p, li, h3, h4, h5 {
     letter-spacing: 0.05em;
 }
 
-h1, h2, .huge  {
-    font-size: 8vw;
-    line-height: 9vw;
+p, address, li, h3, h4, h5 {
+    font-size: $mobile-font-size;
+    line-height: $mobile-line-height;
+    margin-bottom: $mobile-line-height;
+}
 
+h1, h2, .huge  {
+    font-size: $mobile-big-font-size;
+    line-height: $mobile-big-font-size;
     margin: 0;
 }
 
-p, address, li, h3, h4, h5 {
-    font-size: 6vw;
-    line-height: 1.5;
-    margin-bottom: 9vw;
-}
 
+// TABLET
+@media screen and (min-width: $tabletBreak) {
 
-
-
-// Tablet
-@media screen and (min-width: 680px) {
-
-    #bar {
-        display: block;
+    p, address, li, h3, h4, h5 {
+        font-size: $tablet-font-size;
+        line-height: $tablet-line-height;
+        margin-bottom: $tablet-line-height;
     }
-
-    // Absolute to viewport
-    // Use poly fill for the old skool
-    html {
-    }
-
 
     h1, h2, .huge  {
         font-size: 6vw;
         line-height: 6vw;
     }
 
-
-    p, address, li, h3, h4, h5 {
-        font-size: 2vw;
-        line-height: 1.5;
-        margin-bottom: 3vw;
-    }
-
 }
 
-// Desktop
-@media screen and (min-width: 1200px) {
 
-    h1, h2, .huge  {
-        font-size: 7.8vw;
-        line-height: 8vw;
-    }
+// DESKTOP
+@media screen and (min-width: $desktopBreak) {
 
     p,  address, li, h3, h4, h5 {
-        font-size: 1.4vw;
-        line-height: 2vw;
-        margin-bottom: 2vw;
+        font-size: $desktop-font-size;
+        line-height: $desktop-line-height;
+        margin-bottom: $desktop-line-height;
     }
 
+    h1, h2, .huge  {
+        font-size: $desktop-big-font-size;
+        line-height: $desktop-big-line-height;
+    }
 
 }
 
