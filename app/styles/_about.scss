@@ -436,12 +436,11 @@ header, section, aside {
     }
     #share {
         top: -3*3vw;
-        right: 0;
-        width: 20vw;
+        right: 2.75vw;
+        width: 30vw;
         height: 10vw;
         position: absolute;
-
-        display: none;
+        z-index: 20000;
 
         h5 {
             display: none;
@@ -455,21 +454,34 @@ header, section, aside {
 
         a {
             width: auto;
-            position: absolute;
             display: block;
-            right: 0;
-            left: auto;
+            float: right;
+            margin-left: 1vw;
+            background-color: transparent;
+            border: 1px solid $accent !important;
+            color: $accent;
+
+            background-repeat: no-repeat;
         }
 
         .fb a {
-            top: 2*3vw;
+            background-image: url(../images/fb.png);
+            background-position: 6vw center;
         }
+        .tw a {
+            background-image: url(../images/tw.png);
+            background-position: 7vw center;
+        }
+
+
+
     }
 
     #header nav,
     #share {
         a {
             padding: 1vw 4.5vw 0.75vw 1vw;
+            display: block;
         }
     }
 
@@ -479,15 +491,16 @@ header, section, aside {
 // Desktop
 @media screen and (min-width: 1200px) {
 
-    #share {
-        display: none;
-    }
-
     #inner {
         margin: 2.5vw;
         min-height: 140vw;
         position: relatve;
     }
+
+
+#share {
+    right: 2.25vw;
+}
 
     .on-about {
         #header {
