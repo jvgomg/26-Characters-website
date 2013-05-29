@@ -35,6 +35,9 @@
 #family {
     margin-top: 8 * 9vw;
     overflow: hidden;
+    position: relative;
+    z-index: 1000;
+
 
     figure {
         position: relative;
