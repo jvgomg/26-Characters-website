@@ -12,32 +12,68 @@
     margin-left: 2vw;
     margin-right: 2vw;
 
-    margin-top: $mobile-line-height * 3;
+    margin-top: $mobile-line-height * 4;
     top: 0;
 
     // Type layout
     .award {
-        @include spaces(8);
+        @include spaces(9);
     }
     .award-type {
-        @include spaces(0);
+        @include spaces(16);
         margin-bottom: 9vw;
     }
     .school {
         //@include spaces(0);
     }
     .school .year {
-        @include spaces(4);
+        @include spaces(12);
+        clear: left;
     }
 }
 
+#more-lines {
+    margin-left: 2vw;
+    margin-right: 2vw;
+
+    position: absolute;
+    top: $mobile-line-height * 2;
+
+    p {
+        font-size: $mobile-font-size - 1vw;
+        line-height: $mobile-line-height;
+        margin-bottom: 0;
+    }
+
+    .at-the-show {
+        @include spaces(0);
+    }
+
+    .the-dates {
+        margin-top: $mobile-line-height * 3;
+        @include spaces(7);
+    }
+
+    .tickets {
+        display: none;
+    }
+}
+
+
 // Profile elements
 #family {
-    margin-top: 8 * 9vw;
+    margin-top: 11 * 9vw;
     overflow: hidden;
     position: relative;
     z-index: 1000;
 
+    .js & {
+        opacity: 0;
+    }
+
+    .js &.on {
+        opacity: 1;
+    }
 
     figure {
         position: relative;
@@ -118,10 +154,44 @@
             @include spaces(13);
         }
 
+        .award-type {
+            @include spaces(0);
+        }
         .school {
             @include spaces(4);
         }
+        .school .year {
+            @include spaces(4);
+        }
     }
+
+    #more-lines {
+        margin-left: $col/2;
+        margin-right: $col/2;
+        top: ($tablet-line-height * 4);
+
+        p {
+            font-size: $tablet-font-size;
+            line-height: $tablet-line-height;
+        }
+
+        .at-the-show {
+            @include spaces(18);
+        }
+
+        .the-dates {
+            margin-top: $tablet-line-height * 4;
+            @include spaces(41);
+        }
+
+        .tickets {
+            display: block;
+            margin-top: $tablet-line-height * 6;
+            @include spaces(6);
+        }
+
+    }
+
 
     #family {
         margin-top: $tablet-big-line-height * 8;
@@ -184,6 +254,35 @@
         .school .year {
             @include spaces(12);
         }
+    }
+
+    #more-lines {
+        margin-left: $col/1.7;
+        top: ($desktop-line-height * 8);
+
+        width: 93.5vw;
+
+
+        p {
+            font-size: $tablet-font-size;
+            line-height: $tablet-line-height;
+        }
+
+        .at-the-show {
+            @include spaces(22);
+        }
+
+        .the-dates {
+            margin-top: $tablet-line-height * 5;
+            //@include spaces(41);
+        }
+
+        .tickets {
+            display: block;
+            margin-top: $tablet-line-height * 3;
+            //@include spaces(6);
+        }
+
     }
 
 
