@@ -89,6 +89,7 @@
             template: '<a class="box" href="#">Tweet</a>',
             enableHover: false,
             enableTracking: true,
+            text: "26 Characters, Ravensbourne Graphic Design 2013",
             buttons: {
                 twitter: {
                     via: '26chars',
@@ -102,9 +103,7 @@
         });
         $('#share .fb').sharrre({
             share: {
-                facebook: {
-                    send: 'true'
-                }
+                facebook: true
             },
             template: '<a class="box" href="#">Like</a>',
             enableHover: false,
