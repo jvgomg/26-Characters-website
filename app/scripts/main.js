@@ -4,7 +4,8 @@
 
     var $family = $('#family'),
         $body = $('body'),
-        $nav = $('nav a');
+        $nav = $('nav a'),
+        needToPack = false;
 
     // Shuffle the family
     $family.children().shuffle();
@@ -37,7 +38,10 @@
                 $(window).scrollTop( scrollY );
 
                 // Repack
-                if (pack) pack.layout();
+                if (needToPack && pack) {
+                    pack.layout();
+                    needToPack = false;
+                }
 
             }
         });
@@ -74,7 +78,7 @@
         });
 
         /*
-            Repainting
+            Repainting & Flag for a repack
          */
         var causeRepaintsOn = $("h1, h2, h3, h4, h5, p, li, address");
         $(window).resize(function() {
@@ -82,6 +86,8 @@
                 var z = $(this).css("z-index");
                 $(this).css("z-index", z);
             });
+
+            needToPack = true
         });
 
         /*

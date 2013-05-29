@@ -150,6 +150,9 @@
     padding: $mobile-line-height $col/2 0;
     margin: $mobile-line-height (11vw - $col/2 ) $mobile-line-height;
 }
+    #about #staff {
+        padding-bottom: $mobile-line-height;
+    }
 
 #staff {
     padding-bottom: $mobile-line-height;
