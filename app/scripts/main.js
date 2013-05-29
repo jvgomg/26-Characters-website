@@ -25,21 +25,33 @@
         // Flick through effect
         Flickrr().setup( $family );
 
-
-        // Change page
-        $nav.click(function(e) {
-            e.preventDefault();
-            window.scrollTo(0, 0);
-            $body.toggleClass('on-about');
-        });
-
         /*
             Set up packery
          */
         $family.packery({
             itemSelector: 'figure'
         })
+        var pack = $family.data('packery');
+
         $family.addClass('on');
+
+
+        /*
+            About page toggle
+        */
+        var onAbout = false;
+
+        $nav.click(function(e) {
+            e.preventDefault();
+            window.scrollTo(0, 0);
+            $body.toggleClass('on-about');
+
+            if( onAbout ) {
+                pack.layout();
+            }
+
+            onAbout = !onAbout;
+        });
 
 
         /*
