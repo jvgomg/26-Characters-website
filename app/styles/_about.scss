@@ -368,8 +368,8 @@
     }
 
     #share {
-        top: -3*3vw;
-        right: 2.75vw;
+        top: ($tablet-line-height * 3) - 0.4vw;
+        right: $col;
         width: 30vw;
         height: 10vw;
         position: absolute;
@@ -389,21 +389,22 @@
             width: auto;
             display: block;
             float: right;
-            margin-left: 1vw;
+            margin-left: 2vw;
             background-color: transparent;
             border: 1px solid $accent !important;
             color: $accent;
 
+            padding: 0.4vw 1vw 0 4vw;
+
             background-repeat: no-repeat;
+            background-position: 0.3vw center;
         }
 
         .fb a {
             background-image: url(../images/fb.png);
-            background-position: 6vw center;
         }
         .tw a {
             background-image: url(../images/tw.png);
-            background-position: 7vw center;
         }
     }
 
@@ -461,13 +462,11 @@
     }
 
     #share {
-        right: 2.25vw;
+        top: ($desktop-line-height * 4) - 0.4vw;
+        right: 2vw;
 
-        .fb a {
-            background-position: 5.5vw center;
-        }
-        .tw a {
-            background-position: 6.25vw center;
+        a {
+            padding-left: 3.5vw;
         }
     }
 
