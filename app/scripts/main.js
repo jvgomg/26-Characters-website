@@ -31,8 +31,6 @@
             e.preventDefault();
             window.scrollTo(0, 0);
             $body.toggleClass('on-about');
-
-            onAbout = !onAbout;
         });
 
         /*
