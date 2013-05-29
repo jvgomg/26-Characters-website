@@ -14,17 +14,32 @@
         /*
             About page toggle
         */
-        var onAbout = false;
+        var onAbout = false,
+            scrollY = 0;
 
         $nav.click(function(e) {
             e.preventDefault();
+
+            // Flip
+            onAbout = !onAbout;
+
+            // Store scroll position
+            if( onAbout ) {
+                scrollY = $(window).scrollTop();
+            }
+
+            // Show about page
             window.scrollTo(0, 0);
             $body.toggleClass('on-about');
 
-            if( onAbout ) {
-                pack.layout();
+            if( !onAbout ) {
+                // Scroll to last place
+                $(window).scrollTop( scrollY );
+
+                // Repack
+                if (pack) pack.layout();
+
             }
-            onAbout = !onAbout;
         });
 
         // Add layout classes
