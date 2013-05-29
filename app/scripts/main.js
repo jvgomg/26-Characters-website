@@ -25,14 +25,14 @@
         // Flick through effect
         Flickrr().setup( $family );
 
-        // Fade page in
-        //$body.removeClass('fadedOut').addClass('fadeIn');
 
         // Change page
         $nav.click(function(e) {
             e.preventDefault();
             window.scrollTo(0, 0);
             $body.toggleClass('on-about');
+
+            onAbout = !onAbout;
         });
 
         /*
