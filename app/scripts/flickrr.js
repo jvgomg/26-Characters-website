@@ -21,7 +21,8 @@ var Flickrr = function(){
             lastZ = 200,
             flickDie = false,
             flickStarted = false,
-            flickInterval;
+            flickInterval,
+            $profile = $(profile);
 
 
         function flick() {
@@ -74,10 +75,10 @@ var Flickrr = function(){
         } else {
             // Tap Driven
 
-            $(profile).on('touchend', 'img', function(){
+            var myTap = new Tap( profile );
 
-                // Flick through
-                flick()
+            $profile.on('tap', 'img', function(e, touch){
+                flick();
             });
 
             // Disable double tapp to zoom
