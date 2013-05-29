@@ -242,7 +242,7 @@
     #about-header {
         position: absolute;
         padding-left: $col / 2;
-        top: $tablet-big-line-height * 2;
+        top: ($tablet-big-line-height * 3) - $col/2;
 
         h2, .huge {
             // Make some more room so type won't breakline

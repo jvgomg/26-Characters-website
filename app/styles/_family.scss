@@ -112,7 +112,7 @@
 
     #family-header {
         padding: 0 $col/2;
-        margin-top: $col/2 + ($tablet-big-line-height * 3);
+        margin-top: ($tablet-big-line-height * 3);
 
         .award {
             @include spaces(13);
@@ -164,8 +164,10 @@
 @media screen and (min-width: $desktopBreak) {
 
     #family-header {
-        padding: 0 $col * 1;
-        margin-top: ($desktop-big-line-height * 2);
+        padding: 0 $col/2;
+        margin-left: $col/2;
+        margin-top: ($desktop-big-line-height * 3);
+
 
         .award {
             @include spaces(7);
