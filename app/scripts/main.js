@@ -63,6 +63,14 @@
         $family.addClass('on');
 
 
+        // Pack again for browsers using polyfill
+        setTimeout(function () {
+            if( window.StyleFix ){
+                pack.layout();
+            }
+        }, 1200);
+
+
         /*
             Open links in new tab
          */
