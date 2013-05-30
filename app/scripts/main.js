@@ -87,7 +87,7 @@
                 $(this).css("z-index", z);
             });
 
-            needToPack = true
+            needToPack = true;
         });
 
         /*
@@ -124,8 +124,6 @@
                 api.openPopup('facebook');
             }
         });
-
-
 
     });
 
