@@ -132,6 +132,10 @@ a:hover, a.static {
     color: $bg;
 }
 
+input {
+    @include border-radius(0);
+}
+
 input[type=email] {
     border: 1px solid $accent;
     color: $accent;
