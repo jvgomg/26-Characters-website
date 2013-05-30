@@ -2,6 +2,6 @@
 
 **[http://26characte.rs/](http://26characte.rs/)**
 
-Ravensbounre BA Hons Graphic Design 2013 Degree Show.
+Ravensbourne BA Hons Graphic Design 2013 Degree Show.
 
 Website designed and built by student, [James Greenaway](http://greenaway.io).
