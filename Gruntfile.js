@@ -188,6 +188,7 @@ module.exports = function (grunt) {
                 files: {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
+                        '!<%= yeoman.dist %>/scripts/{,*/}*.min.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
                         '<%= yeoman.dist %>/images/portfolio/{,*/}*.{png,jpg,jpeg,gif,webp}'
@@ -276,7 +277,8 @@ module.exports = function (grunt) {
                         'images/funny/*',
                         'scripts/vendor/rem.min.js',
                         'share.jpg',
-                        'scripts/webfonts/*'
+                        'scripts/webfonts/*',
+                        'scripts/*.min.js'
                     ]
                 }]
             }
