@@ -135,6 +135,7 @@ a:hover, a.static {
 input[type=email] {
     border: 1px solid $accent;
     color: $accent;
+    padding-left: 0.5vw;
 }
 
 input[type=submit] {
@@ -144,6 +145,18 @@ input[type=submit] {
     padding: 2vw 2vw 1.75vw 2vw;
 }
 
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: $accent;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: $accent;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $accent;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: $accent;
+}
 
 
 /*
