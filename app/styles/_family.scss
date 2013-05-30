@@ -39,6 +39,8 @@
     position: absolute;
     top: $mobile-line-height * 2;
 
+    z-index: 20000;
+
     p {
         font-size: $mobile-font-size - 1vw;
         line-height: $mobile-line-height;
