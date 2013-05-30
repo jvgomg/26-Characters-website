@@ -368,6 +368,8 @@
     #contact {
         top: $tablet-line-height * 38;
         left: $left-buffer;
+
+        z-index: 20000;
     }
 
     #staff {
