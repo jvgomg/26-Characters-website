@@ -162,6 +162,10 @@ input[type=submit] {
     color: $accent;
 }
 
+input:focus {
+    outline: none; // no outline on webkit
+}
+
 
 /*
     Page toggle
