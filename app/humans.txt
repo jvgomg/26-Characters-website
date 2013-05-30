@@ -1,0 +1,28 @@
+/* TEAM */
+
+Lead: James Greenaway
+Site: http://greenaway.io
+Twitter: @jvgreenaway
+Location: London, UK.
+
+
+/* THANKS */
+
+Louise Prideaux, Graphic Design Subject Leader, Ravensbourne.
+Maaike van Neck, Senior Lecturer, Ravensbourne: http://www.mwmcreative.co.uk/
+
+Ravensbourne BA Hons Graphic Design class of 2013 - You guys are awesome!
+
+
+/* SITE */
+
+Last update: 2013/05/30
+
+Fonts: Karben 105 Mono [Book, Book Oblique].
+Colours: #000000, #0000FF.
+
+Standards: HTML5, CSS3 [vw–unit], JavaScript.
+Components: Modernizr, jQuery, Packery, Tap.js, jQuery.Sharrre.
+Tooling: Yeoman, Grunt, Bower, SCSS, Sublime Text 2.
+
+Source: https://github.com/greenaway/26-characters
