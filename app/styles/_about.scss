@@ -98,8 +98,8 @@
     clear: left;
 }
 
-#contact,
-#location {
+#location,
+#contact {
     h3 {
         margin-bottom: 0;
     }
@@ -346,7 +346,7 @@
     }
 
     #location {
-        top: $tablet-line-height * 17;
+        top: $tablet-line-height * 18;
         left: ($col * 14) + 2vw;
 
         h3 {
@@ -356,7 +356,7 @@
 
     #logos {
         width: 40vw;
-        top: $tablet-line-height * 24;
+        top: ($tablet-line-height * 24)+2vw;
         left: $col * 12;
 
         .show {
@@ -495,6 +495,20 @@
         left: $left-buffer;
         width: 60vw;
 
+        h3 {
+            background-image: url(../images/star.png);
+            background-repeat: no-repeat;
+            background-position: left top;
+
+            padding-left: 2.75vw;
+            //padding-bottom: 0.2vw;
+
+            position: relative;
+            left: -2.75vw;
+            //top: -0.25vw;
+
+        }
+
         .group {
             width: 33.333%;
 
@@ -518,6 +532,21 @@
     #location {
         top: $desktop-line-height * 38;
         left: $left-buffer;
+
+
+        a {
+            background-image: url(../images/pin.png);
+            background-repeat: no-repeat;
+            background-position: left center;
+
+            padding-left: 2vw;
+            padding-bottom: 0.2vw;
+            padding-top: 0.25vw;
+
+            position: relative;
+            left: -2vw;
+        }
+
     }
 
     #staff {
@@ -554,6 +583,23 @@
         .email {
             margin-left: 100/20*1.25vw;
         }
+
+        a {
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding-left: 2.75vw;
+            padding-bottom: 0.2vw;
+            padding-top: 0.5vw;
+
+            &.twitter {
+                background-image: url(../images/twitter.png);
+            }
+
+            &.email {
+                background-image: url(../images/email.png);
+            }
+        }
+
     }
 
     #sign-up {
