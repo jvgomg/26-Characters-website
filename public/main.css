@@ -1,0 +1,1507 @@
+@charset "UTF-8";
+/*
+    26 Characters Styles
+    Author: James Greenaway @jvgreenaway
+ */
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+    white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+q {
+    quotes: "“" "”" "‘" "’";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+    Adds nbsp to :before
+ */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+    Vars n ting
+ */
+/*
+    The basics
+ */
+/*
+    Layout IDs
+ */
+html:after {
+    content: "mobile";
+    display: none;
+}
+
+@media screen and (min-width: 680px) {
+    html:after {
+        content: "tablet";
+        display: none;
+    }
+}
+@media screen and (min-width: 1200px) {
+    html:after {
+        content: "desktop";
+        display: none;
+    }
+}
+/*
+    Typography scale
+*/
+h1,
+h2,
+.huge,
+p,
+li,
+h3,
+h4,
+h5 {
+    letter-spacing: 0.05em;
+}
+
+p,
+address,
+li,
+h3,
+h4,
+h5,
+input {
+    font-size: 6vw;
+    line-height: 9vw;
+    margin-bottom: 9vw;
+}
+
+h1,
+h2,
+.huge {
+    font-size: 8vw;
+    line-height: 9vw;
+    margin: 0;
+}
+
+@media screen and (min-width: 680px) {
+    p,
+    address,
+    li,
+    h3,
+    h4,
+    h5,
+    input {
+        font-size: 2vw;
+        line-height: 3vw;
+        margin-bottom: 3vw;
+    }
+    h1,
+    h2,
+    .huge {
+        font-size: 6vw;
+        line-height: 6vw;
+    }
+}
+@media screen and (min-width: 1200px) {
+    p,
+    address,
+    li,
+    h3,
+    h4,
+    h5,
+    input {
+        font-size: 1.4vw;
+        line-height: 2vw;
+        margin-bottom: 2vw;
+    }
+    h1,
+    h2,
+    .huge {
+        font-size: 7.8vw;
+        line-height: 8vw;
+    }
+}
+/*
+    Type reset
+ */
+body {
+    min-height: 100%;
+    font-family: Karben105Mono, "Lucida Console", Monaco, monospace;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong,
+em {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+abbr[title] {
+    border: none;
+}
+
+address {
+    font-style: normal;
+}
+
+/*
+    Misc Reset
+ */
+* {
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+li address {
+    margin: 0;
+}
+
+img {
+    height: auto;
+    display: block;
+}
+
+/*
+    Colors + hovers + forms
+ */
+body {
+    background-color: #fff;
+    color: #0000ff;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: underline;
+    border: none !important;
+}
+
+a:hover,
+a.static {
+    font-style: italic;
+}
+
+::-moz-selection {
+    background: #0000ff;
+    color: #fff;
+}
+
+::selection {
+    background: #0000ff;
+    color: #fff;
+}
+
+input {
+    -webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+    border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+}
+
+input[type="email"] {
+    border: 1px solid #0000ff;
+    color: #0000ff;
+    padding-left: 0.5vw;
+}
+
+input[type="submit"] {
+    background-color: #0000ff;
+    color: #fff;
+    border: 1px solid #0000ff;
+    padding: 2vw 2vw 1.75vw 2vw;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #0000ff;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #0000ff;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #0000ff;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #0000ff;
+}
+
+input:focus {
+    outline: none;
+}
+
+/*
+    Page toggle
+ */
+.on-about .family-page {
+    display: none !important;
+}
+
+/*
+    The page parts
+ */
+/*
+    Header and Navigation
+ */
+#header {
+    position: fixed;
+    top: 0;
+    width: 98vw;
+    z-index: 10000;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.on-about #header {
+    position: absolute;
+}
+#header h1 {
+    margin-top: 9vw;
+}
+#header h1:before {
+    content: "  ";
+    display: inline;
+}
+#header nav p {
+    display: block;
+    margin: 0;
+}
+#header nav a {
+    position: absolute;
+    display: block;
+    top: 6.8vw;
+    right: 3vw;
+    z-index: 10001;
+    border: 1px solid #0000ff !important;
+    padding: 2vw 2vw 0.75vw 2vw;
+    text-decoration: none;
+    background-color: #fff;
+}
+.on-about #header nav a {
+    color: #fff;
+    background-color: #0000ff;
+    font-style: italic;
+}
+
+@media screen and (min-width: 680px) {
+    #header {
+        margin-top: 2.5vw;
+        padding-left: 2.5vw;
+        margin-left: 0;
+        margin-right: 0;
+        overflow: hidden;
+        width: 93.5vw;
+    }
+    #header h1 {
+        margin-top: 3.5vw;
+    }
+    #header h1:before {
+        content: "  ";
+        display: inline;
+    }
+    #header nav a {
+        top: 0vw;
+        right: 0;
+        background-image: url(./images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: 7.5vw center;
+    }
+    #header nav a,
+    #header nav a #share a {
+        padding: 1vw 4.5vw 0.75vw 1vw;
+    }
+    .on-about #header nav a {
+        background-image: url(./images/cross.png);
+    }
+}
+@media screen and (min-width: 1200px) {
+    #header h1 {
+        margin-top: 5.5vw;
+    }
+    #header nav a {
+        background-position: 6.5vw center;
+    }
+}
+/*
+    Family view
+ */
+#family-header {
+    position: fixed;
+    z-index: 500;
+    width: 100%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 36vw;
+    top: 0;
+}
+#family-header .award:before {
+    content: "         ";
+    display: inline;
+}
+#family-header .award-type {
+    margin-bottom: 9vw;
+}
+#family-header .award-type:before {
+    content: "                ";
+    display: inline;
+}
+#family-header .school .year {
+    clear: left;
+}
+#family-header .school .year:before {
+    content: "            ";
+    display: inline;
+}
+
+#more-lines {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    position: absolute;
+    top: 18vw;
+    z-index: 20000;
+}
+#more-lines p {
+    font-size: 5vw;
+    line-height: 9vw;
+    margin-bottom: 0;
+}
+#more-lines .at-the-show:before {
+    content: "  ";
+    display: inline;
+}
+#more-lines .the-dates {
+    margin-top: 27vw;
+}
+#more-lines .the-dates:before {
+    content: "       ";
+    display: inline;
+}
+#more-lines .tickets {
+    display: none;
+}
+
+#family {
+    margin-top: 99vw;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+}
+.js #family {
+    opacity: 0;
+}
+.js #family.on {
+    opacity: 1;
+}
+#family figure {
+    position: relative;
+    z-index: 1000;
+    width: 90vw;
+    height: 70vw;
+    margin-bottom: 30vw;
+}
+#family figure img {
+    cursor: crosshair;
+}
+#family figure .face {
+    position: relative;
+    width: 40vw;
+    top: 5vw;
+    left: 7.5vw;
+}
+#family figure .face img {
+    position: absolute;
+    width: 100%;
+}
+#family figure .face img:first-child {
+    z-index: 200;
+}
+#family figure .face img:nth-child(2) {
+    z-index: 199;
+}
+#family figure .portfolio {
+    overflow: hidden;
+}
+#family figure .portfolio li {
+    position: absolute;
+    width: 90vw;
+    height: 70vw;
+}
+#family figure .portfolio img {
+    position: relative;
+    max-width: 90vw;
+    max-height: 70vw;
+}
+#family figure .portfolio li:nth-child(1) img {
+    z-index: 198;
+}
+#family figure .portfolio li:nth-child(2) img {
+    z-index: 197;
+}
+#family figure .portfolio li:nth-child(3) img {
+    z-index: 196;
+}
+#family figure .portfolio li:nth-child(4) img {
+    z-index: 195;
+}
+#family figure .portfolio li:nth-child(5) img {
+    z-index: 194;
+}
+#family figure .portfolio li:nth-child(6) img {
+    z-index: 193;
+}
+#family figure .portfolio li:nth-child(7) img {
+    z-index: 192;
+}
+#family figure .portfolio li:nth-child(8) img {
+    z-index: 191;
+}
+#family figure .portfolio li:nth-child(9) img {
+    z-index: 190;
+}
+#family figure .portfolio li:nth-child(10) img {
+    z-index: 189;
+}
+#family figure figcaption {
+    position: absolute;
+    z-index: 30000;
+    top: 70vw;
+    left: 11.5vw;
+}
+
+@media screen and (min-width: 680px) {
+    #family-header {
+        padding: 0 2.5vw;
+        margin-top: 18vw;
+    }
+    #family-header .award:before {
+        content: "             ";
+        display: inline;
+    }
+    #family-header .award-type:before {
+        content: "  ";
+        display: inline;
+    }
+    #family-header .school:before {
+        content: "    ";
+        display: inline;
+    }
+    #family-header .school .year:before {
+        content: "    ";
+        display: inline;
+    }
+    #more-lines {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+        top: 12vw;
+    }
+    #more-lines p {
+        font-size: 2vw;
+        line-height: 3vw;
+    }
+    #more-lines .at-the-show:before {
+        content: "                  ";
+        display: inline;
+    }
+    #more-lines .the-dates {
+        margin-top: 12vw;
+    }
+    #more-lines .the-dates:before {
+        content: "                                         ";
+        display: inline;
+    }
+    #more-lines .tickets {
+        display: block;
+        margin-top: 18vw;
+    }
+    #more-lines .tickets:before {
+        content: "      ";
+        display: inline;
+    }
+    #family {
+        margin-top: 48vw;
+    }
+    #family figure {
+        width: 30vw;
+        height: 22.5vw;
+        margin-bottom: 15vw;
+    }
+    #family figure .face {
+        top: 5vw;
+        left: 7.5vw;
+        width: 12.5vw;
+    }
+    #family figure .portfolio li {
+        width: 30vw;
+        height: 22.5vw;
+    }
+    #family figure .portfolio img {
+        max-width: 30vw;
+        max-height: 22.5vw;
+    }
+    #family figure figcaption {
+        top: 23.75vw;
+        left: 11.5vw;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #family-header {
+        padding: 0 2.5vw;
+        margin-left: 2.5vw;
+        margin-top: 24vw;
+    }
+    #family-header .award:before {
+        content: "       ";
+        display: inline;
+    }
+    #family-header .award-type {
+        margin-bottom: 0;
+    }
+    #family-header .school:before {
+        content: "       ";
+        display: inline;
+    }
+    #family-header .school .year:before {
+        content: "            ";
+        display: inline;
+    }
+    #more-lines {
+        margin-left: 2.9411764706vw;
+        top: 16vw;
+        width: 93.5vw;
+    }
+    #more-lines p {
+        font-size: 2vw;
+        line-height: 3vw;
+    }
+    #more-lines .at-the-show:before {
+        content: "                      ";
+        display: inline;
+    }
+    #more-lines .the-dates {
+        margin-top: 15vw;
+    }
+    #more-lines .tickets {
+        display: block;
+        margin-top: 6vw;
+    }
+    #family {
+        margin-top: 42vw;
+    }
+    #family figure .face {
+        width: 10vw;
+    }
+}
+/*
+    About Page
+ */
+#about {
+    margin-bottom: 2vw;
+    margin-top: 27vw;
+}
+#about header,
+#about section,
+#about aside {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+#about section,
+#about aside {
+    margin-left: 11vw;
+}
+
+#about {
+    display: none;
+}
+.on-about #about {
+    display: block;
+}
+
+#about-header {
+    overflow: hidden;
+}
+#about-header .at,
+#about-header .degree,
+#about-header .date-1,
+#about-header .date-2,
+#about-header .month,
+#about-header .ampersand,
+#about-header .venue,
+#about-header .city,
+#about-header .register-link,
+#about-header .dash {
+    float: left;
+    display: block;
+}
+#about-header .date-1,
+#about-header .ampersand,
+#about-header .venue,
+#about-header .city,
+#about-header .register-link,
+#about-header .dash {
+    clear: left;
+}
+#about-header .degree,
+#about-header .month,
+#about-header .city {
+    margin-bottom: 9vw;
+}
+#about-header .at {
+    display: none;
+}
+#about-header .degree:before {
+    content: " ";
+    display: inline;
+}
+#about-header .date-1:before {
+    content: "     ";
+    display: inline;
+}
+#about-header .date-2:before {
+    content: "     ";
+    display: inline;
+}
+#about-header .month:before {
+    content: "          ";
+    display: inline;
+}
+#about-header .city:before {
+    content: "  ";
+    display: inline;
+}
+#about-header .register-link:before {
+    content: "  ";
+    display: inline;
+}
+
+#contact {
+    margin-top: 9vw;
+    clear: left;
+}
+
+#location h3,
+#contact h3 {
+    margin-bottom: 0;
+}
+
+#location p {
+    margin-bottom: 0;
+}
+
+#staff {
+    clear: both;
+}
+#staff h4,
+#staff li {
+    margin-bottom: 0;
+}
+
+#logos {
+    overflow: hidden;
+    position: relative;
+    left: -2vw;
+}
+#logos a {
+    float: left;
+}
+#logos img {
+    height: auto;
+    width: 100%;
+}
+#logos .rave {
+    width: 30%;
+}
+#logos .show {
+    position: relative;
+    top: 6vw;
+    left: 4vw;
+    width: 24%;
+}
+
+#about #awards,
+#about #staff {
+    border: 1px solid #0000ff;
+    padding: 9vw 2.5vw 0;
+    margin: 9vw 8.5vw 9vw;
+}
+
+#about #staff {
+    padding-bottom: 9vw;
+}
+
+#staff {
+    padding-bottom: 9vw;
+}
+
+#share {
+    margin-top: 18vw;
+}
+#share h5 {
+    margin-bottom: 3vw;
+}
+#share p {
+    float: left;
+    position: relative;
+    left: -3vw;
+    margin-right: 3vw;
+}
+#share a {
+    border: 1px solid #0000ff;
+    padding: 3vw 3vw 2vw;
+    background-color: #0000ff;
+    text-decoration: none;
+    color: #fff;
+}
+
+#sign-up h2 {
+    margin-bottom: 2.25vw;
+}
+#sign-up label {
+    display: none;
+}
+#sign-up input {
+    margin-bottom: 4.5vw;
+}
+
+@media screen and (min-width: 680px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 680px) and (max-moz-device-pixel-ratio: 2) {
+    .on-about #cover {
+        background-image: url(./images/ptn-x2.png) !important;
+        background-size: 5px auto;
+    }
+    #header nav a {
+        background-image: url(./images/arrow-x2.png) !important;
+        background-size: 16px auto;
+    }
+    .on-about #header nav a {
+        background-image: url(./images/cross-x2.png) !important;
+    }
+}
+@media screen and (min-width: 680px) {
+    #cover {
+        position: static;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow-x: hidden;
+    }
+    .on-about #cover {
+        position: fixed;
+        height: auto;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        background-image: url(./images/ptn.png);
+    }
+    #inner {
+        margin: 2.5vw;
+        background-color: #fff;
+        overflow: hidden;
+    }
+    .on-about #inner {
+        min-height: 147vw;
+    }
+    #about {
+        position: relative;
+        padding-bottom: 3vw;
+        margin-top: 0;
+    }
+    #about header,
+    #about section,
+    #about aside {
+        margin: 0;
+    }
+    #about-header {
+        position: absolute;
+        padding-left: 2.5vw;
+        top: 15.5vw;
+    }
+    #about-header h2,
+    #about-header .huge {
+        width: 110%;
+    }
+    #about-header .extra {
+        display: none;
+    }
+    #about-header .degree,
+    #about-header .month,
+    #about-header .city {
+        margin-bottom: 6vw;
+    }
+    #about-header .degree {
+        clear: none;
+    }
+    #about-header .degree:before {
+        content: " ";
+        display: inline;
+    }
+    #about-header .date-1:before {
+        content: "                      ";
+        display: inline;
+    }
+    #about-header .date-2:before {
+        content: "                     ";
+        display: inline;
+    }
+    #about-header .month {
+        margin-top: 6vw;
+        margin-bottom: 12vw;
+    }
+    #about-header .month:before {
+        content: "                   ";
+        display: inline;
+    }
+    #about-header .venue:before {
+        content: "                ";
+        display: inline;
+    }
+    #about-header .city {
+        margin-bottom: 24vw;
+    }
+    #about-header .city:before {
+        content: "                      ";
+        display: inline;
+    }
+    #about-header .register-link:before {
+        content: "  ";
+        display: inline;
+    }
+    #about-header .tickets {
+        display: block;
+        clear: left;
+    }
+    #awards,
+    #location,
+    #contact,
+    #logos,
+    #staff,
+    #share,
+    #sign-up,
+    #humans {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+    }
+    #about #awards,
+    #about #staff {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    #awards {
+        border: none;
+        top: 24vw;
+        left: 8.75vw;
+        width: 60vw;
+    }
+    #awards .group {
+        width: 28vw;
+        float: left;
+        padding-right: 0;
+    }
+    #location {
+        top: 54vw;
+        left: 72vw;
+    }
+    #location h3 {
+        display: none;
+    }
+    #logos {
+        width: 40vw;
+        top: 74vw;
+        left: 60vw;
+    }
+    #logos .show {
+        top: 2vw;
+    }
+    #contact {
+        top: 114vw;
+        left: 8.75vw;
+        z-index: 20000;
+    }
+    #staff {
+        top: 108vw;
+        left: 45vw;
+        width: 45vw;
+        border: none;
+    }
+    #staff .group {
+        width: 50%;
+        float: left;
+    }
+    #share {
+        top: 8.6vw;
+        right: 5vw;
+        width: 30vw;
+        height: 10vw;
+        position: absolute;
+        z-index: 20000;
+    }
+    #share h5 {
+        display: none;
+    }
+    #share p {
+        float: none;
+        margin: 0;
+        position: static;
+    }
+    #share a {
+        width: auto;
+        display: block;
+        float: right;
+        margin-left: 2vw;
+        background-color: transparent;
+        border: 1px solid #0000ff !important;
+        color: #0000ff;
+        padding: 0.4vw 1vw 0 4vw;
+        background-repeat: no-repeat;
+        background-position: 0.3vw center;
+    }
+    #share .fb a {
+        background-image: url(./images/fb.png);
+    }
+    #share .tw a {
+        background-image: url(./images/tw.png);
+    }
+    #sign-up {
+        width: 40vw;
+        top: 90vw;
+        left: 50vw;
+        border: 1px solid;
+        padding: 2.25vw 2.5vw;
+    }
+    #sign-up h2 {
+        font-size: 2vw;
+        line-height: 3vw;
+        margin-bottom: 2vw;
+    }
+    #sign-up input {
+        float: left;
+        margin-bottom: 0;
+    }
+    #sign-up input[type="email"] {
+        height: 4.5vw;
+        width: 25vw;
+    }
+    #sign-up input[type="submit"] {
+        padding: 0 1.5vw;
+        height: 4.5vw;
+    }
+    #humans {
+        left: 8.75vw;
+        top: 135vw;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .on-about #inner {
+        min-height: 130vw;
+    }
+    #about-header {
+        top: 13.5vw;
+    }
+    #about-header .date-1:before {
+        content: "                ";
+        display: inline;
+    }
+    #about-header .date-2:before {
+        content: "               ";
+        display: inline;
+    }
+    #about-header .month {
+        margin-bottom: 8vw;
+    }
+    #about-header .month:before {
+        content: "             ";
+        display: inline;
+    }
+    #about-header .venue:before {
+        content: "        ";
+        display: inline;
+    }
+    #about-header .city {
+        margin-bottom: 8vw;
+    }
+    #about-header .city:before {
+        content: "        ";
+        display: inline;
+    }
+    #awards {
+        top: 26vw;
+        left: 10.7vw;
+        width: 60vw;
+    }
+    #awards h3 {
+        background-image: url(./images/star.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        padding-left: 2.75vw;
+        position: relative;
+        left: -2.75vw;
+    }
+    #awards .group {
+        width: 33.333%;
+    }
+    #awards .group:last-child h4 {
+        margin-top: 0;
+    }
+    #share {
+        top: 7.6vw;
+        right: 2vw;
+    }
+    #share a {
+        padding-left: 3.5vw;
+    }
+    #location {
+        top: 76vw;
+        left: 10.7vw;
+    }
+    #location a {
+        background-image: url(./images/pin.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 2vw;
+        padding-bottom: 0.2vw;
+        padding-top: 0.25vw;
+        position: relative;
+        left: -2vw;
+    }
+    #staff {
+        top: 100vw;
+        width: 49vw;
+    }
+    #logos {
+        top: 108vw;
+        left: 9.45vw;
+        width: 20vw;
+        overflow: visible;
+    }
+    #logos .rave {
+        width: 10vw;
+    }
+    #logos .show {
+        width: 7.5vw;
+        left: 2vw;
+    }
+    #contact {
+        top: 60vw;
+        left: 49vw;
+    }
+    #contact h3 {
+        display: none;
+    }
+    #contact a,
+    #contact p {
+        float: left;
+    }
+    #contact .email {
+        margin-left: 6.25vw;
+    }
+    #contact a {
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 2.75vw;
+        padding-bottom: 0.2vw;
+        padding-top: 0.5vw;
+    }
+    #contact a.twitter {
+        background-image: url(./images/twitter.png);
+    }
+    #contact a.email {
+        background-image: url(./images/email.png);
+    }
+    #sign-up {
+        width: 25vw;
+        top: 75vw;
+        left: 65vw;
+        padding: 2vw 2.5vw;
+    }
+    #sign-up h2 {
+        font-size: 1.4vw;
+        line-height: 2vw;
+        margin-bottom: 1.3333333333vw;
+    }
+    #sign-up input[type="email"] {
+        height: 3vw;
+        width: 100%;
+        margin-bottom: 1vw;
+    }
+    #sign-up input[type="submit"] {
+        height: 3vw;
+    }
+    #humans {
+        left: 10.7vw;
+        top: 122vw;
+    }
+}
+
+abbr {
+    text-decoration: none;
+}
+
+/* Bye bye */
