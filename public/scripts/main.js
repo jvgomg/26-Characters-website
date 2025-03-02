@@ -88,6 +88,11 @@
             alert("You’re a good few years too late!");
         });
     
+        // disable the form
+        $('#mc-embedded-subscribe-form').on('submit', function (event) {
+            event.preventDefault();
+            alert("Sorry, not gonna happen!");
+        });
 
         /*
             Repainting & Flag for a repack
